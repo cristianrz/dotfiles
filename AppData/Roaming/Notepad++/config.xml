@@ -7,9 +7,6 @@
         <Find name="tracj" />
         <Replace name="" />
     </FindHistory>
-    <FileBrowser latestSelectedItem="C:\Users\cariza\AppData\Roaming\Notepad++">
-        <root foldername="C:\Users\cariza\AppData\Roaming\Notepad++" />
-    </FileBrowser>
     <History nbMaxFile="0" inSubMenu="no" customLength="0" />
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
