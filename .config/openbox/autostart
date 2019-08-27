@@ -1,0 +1,24 @@
+### use arandr to set screen preference
+### save as ~/.screenlayout/dual-head.sh
+### uncomment next line
+# ~/.screenlayout/dual-head.sh
+
+### activate natural scrolling
+xinput set-prop 12 288 1 
+
+### restore wallpaper
+sleep 1; tint2 &
+
+### enable numlock
+### uncomment next line
+#sleep 0.5; numlockx &
+
+### sets the wallpaper
+feh ~/.config/wallpaper/wallpaper.jpg --bg-scale
+
+### start redshift settings for uk
+redshift -l 50:1 &
+
+### sets keyboard in english us
+setxkbmap us 
+
