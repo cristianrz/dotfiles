@@ -9,10 +9,6 @@ CapsLock::
 Send {LWin down}{Tab}{LWin up}
 return
 
-!2::
-Send {LWin down}s{LWin up}
-return
-
 
 ; Disables alt F4
 !F4::
