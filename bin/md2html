@@ -1,0 +1,2 @@
+#!/bin/sh
+pandoc -s -f markdown -t html "$1" --css ~/.config/md2html/styles.css

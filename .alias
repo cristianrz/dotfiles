@@ -1,0 +1,33 @@
+#!/bin/bash
+# I prefer lrt rather than the usual ll
+alias ll="ls -lrt"
+
+# Alias xdg-open to open
+alias open="xdg-open"
+
+# Downloads from youtube in mp3 directly
+alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
+
+# This function searches through the history
+alias his="history 1000 | grep"
+
+if [ -d "/C/Windows/" ]; then
+  alias firefox="/C/Program\ Files/Mozilla\ Firefox/firefox.exe"
+else
+  # br edits file names in vim
+  alias br="vimv;ls -1"
+
+  # ccat prints cat with colours 
+  alias ccat='highlight -n -O ansi --force'
+
+  # grep with colours
+  alias grep="grep --color=auto"
+
+  # abreviations of sudo dnf
+  dnf -v &> /dev/null && alias snf="sudo dnf"
+  apt -v &> /dev/null && alias snf="sudo apt"
+fi
+
+alias more="less"
+
+alias sorry="sudo !!"
