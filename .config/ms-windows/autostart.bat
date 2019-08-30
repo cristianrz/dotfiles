@@ -40,11 +40,16 @@ if exist "C:\Program Files\LGHUB\lghub.exe" (
 	start "" "C:\Program Files\LGHUB\lghub.exe"
 )
 
+if exist "C:\Program Files\Classic Shell\ClassicStartMenu.exe" (
+	start "" "C:\Program Files\Classic Shell\ClassicStartMenu.exe"
+)
+
 timeout 5
 
 if exist "C:\Program Files\VeraCrypt\VeraCrypt.exe" (
 	start "" "C:\Program Files\VeraCrypt\VeraCrypt.exe"
 )
+
 
 :END
 endlocal
