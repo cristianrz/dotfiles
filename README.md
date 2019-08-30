@@ -9,7 +9,7 @@
 You can clone the repository wherever you want.
 
 ```bash
-git clone https://github.com/cristianarbe/dot-files.git
+git clone https://github.com/cristianarbe/dotfiles.git
 ```
 
 Then copy the contents of dot-files to your home directory.
@@ -17,4 +17,4 @@ Then copy the contents of dot-files to your home directory.
 ## Feedback
 
 Suggestions/improvements
-[welcome](https://github.com/cristianarbe/dot-files/issues)!
+[welcome](https://github.com/cristianarbe/dotfiles/issues)!
