@@ -58,6 +58,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'chiel92/vim-autoformat'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'scrooloose/nerdtree'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -82,3 +84,9 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+set background=dark
+set termguicolors
+colorscheme quantum
+
+autocmd vimenter * NERDTree
