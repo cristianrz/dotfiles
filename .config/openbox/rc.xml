@@ -159,25 +159,25 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <keybind key="S-W-1">
+    <keybind key="W-z">
       <action name="SendToDesktop">
         <desktop>1</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="S-W-2">
+    <keybind key="W-x">
       <action name="SendToDesktop">
         <desktop>2</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="S-W-3">
+    <keybind key="W-c">
       <action name="SendToDesktop">
         <desktop>3</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="S-W-4">
+    <keybind key="W-v">
       <action name="SendToDesktop">
         <desktop>4</desktop>
         <follow>no</follow>
