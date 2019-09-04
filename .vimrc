@@ -69,16 +69,14 @@ call plug#end()
 set colorcolumn=80
 
 set tabstop=4
+set shiftwidth=4
+set expandtab
 
 let @h = 'i<!DOCTYPE html><html lang="en|€kb" dir-€kb=ltr"€kb€kb€kb€kb"ltr">	<head>		<meta>€kb charset="utf-8">		<title><tit€kb€kb€kb/*title€kb€kb€kb€kb€kb€kbtitle>	</head>	<o€kbbody>	</body></html>€ku€ku€ku€ku€ku€kr€kr€kr€kr€kr€kr€kr€kr€ýa'
-
-
-" let g:user_emmet_leader_key='<Tab>'
 
 set number
 
 set ic
-
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
