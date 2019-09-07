@@ -1,15 +1,3 @@
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Jan 26
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
@@ -58,25 +46,21 @@ call plug#begin('~/.vim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'chiel92/vim-autoformat'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'scrooloose/nerdtree'
-
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'sheerun/vim-polyglot'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" colorscheme nord
-
 set colorcolumn=80
-
-set tabstop=4
-set shiftwidth=4
 set expandtab
+set ic
+set number
+set shiftwidth=4
+set tabstop=4
 
 let @h = 'i<!DOCTYPE html><html lang="en|€kb" dir-€kb=ltr"€kb€kb€kb€kb"ltr">	<head>		<meta>€kb charset="utf-8">		<title><tit€kb€kb€kb/*title€kb€kb€kb€kb€kb€kbtitle>	</head>	<o€kbbody>	</body></html>€ku€ku€ku€ku€ku€kr€kr€kr€kr€kr€kr€kr€kr€ýa'
 
-set number
-
-set ic
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -87,3 +71,4 @@ set background=dark
 set termguicolors
 colorscheme quantum
 
+set t_te=[H[2J
