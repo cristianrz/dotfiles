@@ -28,6 +28,13 @@ else
   apt -v &> /dev/null && alias snf="sudo apt"
 fi
 
+# Give priority to less over more
 alias more="less"
 
-alias sorry="sudo !!"
+# Exit terminal like in vim
+alias :q="exit"
+
+# Add more verbose to move copy and create directories
+alias mv="mv -v"
+alias cp="cp -v"
+alias mkdir="mkdir -v"
