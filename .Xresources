@@ -36,7 +36,7 @@
 *color15: #ebdbb2
 
 
-*faceName: Inconsolata:pixelsize=24
+*faceName: Inconsolata:pixelsize=28
 
 xTerm*scrollBar: off
 xterm*scrollBar: false
