@@ -87,4 +87,3 @@ set background=dark
 set termguicolors
 colorscheme quantum
 
-autocmd vimenter * NERDTree
