@@ -1,41 +1,42 @@
-! -----------------------------------------------------------------------------
-! File: gruvbox-light.xresources
-! Description: Retro groove colorscheme generalized
-! Author: morhetz <morhetz@gmail.com>
-! Source: https://github.com/morhetz/gruvbox-generalized
-! Last Modified: 6 Sep 2014
-! -----------------------------------------------------------------------------
+! special
+*.foreground:   #c5c8c6
+*.background:   #263238
+*.cursorColor:  #c5c8c6
 
-! hard contrast: *background: #f9f5d7
-*background: #fbf1c7
-! soft contrast: *background: #f2e5bc
-*foreground: #3c3836
-! Black + DarkGrey
-*color0:  #fdf4c1
-*color8:  #928374
-! DarkRed + Red
-*color1:  #cc241d
-*color9:  #9d0006
-! DarkGreen + Green
-*color2:  #98971a
-*color10: #79740e
-! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #b57614
-! DarkBlue + Blue
-*color4:  #458588
-*color12: #076678
-! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #8f3f71
-! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #427b58
-! LightGrey + White
-*color7:  #7c6f64
-*color15: #3c3836
+! black
+*.color0:       #212d32
+*.color8:       #37474f
 
-*faceName: Inconsolata:pixelsize=24
+! red
+*.color1:       #ec5f67
+*.color9:       #f77669
+
+! green
+*.color2:       #8bd649
+*.color10:      #c3e88d
+
+! yellow
+*.color3:       #f1e655
+*.color11:      #f8e71c
+
+! blue
+*.color4:       #85678f
+*.color12:      #5f819d
+
+! magenta
+*.color5:       #7986cb
+*.color13:      #82b1ff
+
+! cyan
+*.color6:       #5c7e8c
+*.color14:      #80cbc4
+
+! white
+*.color7:       #707880
+*.color15:      #cdd3de
+
+
+*faceName: Inconsolata:pixelsize=28
 
 xTerm*scrollBar: off
 xterm*scrollBar: false

@@ -61,18 +61,7 @@ function restart(){
 	pkill "$@" && start "$@"
 }
 
-
-function bcomp(){
-		filename="${2%.*}"
-	case "$1" in
-			build)
-					shellcheck "$2" && cp "$2" "$filename"
-					;;
-			run)
-					shellcheck "$2" && bash "$2"
-					;;
-			*)
-					echo "invalid argument"
-					;;
-	esac
+# Repeat the last command as sudo
+function sorry(){
+    sudo $(history | cut -c 8- | tail -n 2 | head -n 1)
 }
