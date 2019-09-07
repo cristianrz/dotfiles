@@ -30,4 +30,11 @@ fi
 
 alias more="less"
 
-alias sorry="sudo !!"
+alias :q="exit"
+alias :wq="exit"
+alias :Q="exit"
+
+
+alias mv="mv -v"
+alias cp="cp -v"
+alias mkdir="mkdir -v"
