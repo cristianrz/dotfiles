@@ -37,6 +37,7 @@
 
 
 *faceName: Inconsolata:pixelsize=28
+XTerm*allowBoldFonts: false
 
 xTerm*scrollBar: off
 xterm*scrollBar: false
