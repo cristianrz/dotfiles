@@ -48,7 +48,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'tyrannicaltoucan/vim-quantum'
-Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -56,8 +56,8 @@ set colorcolumn=80
 set expandtab
 set ic
 set number
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 let @h = 'i<!DOCTYPE html><html lang="en|€kb" dir-€kb=ltr"€kb€kb€kb€kb"ltr">	<head>		<meta>€kb charset="utf-8">		<title><tit€kb€kb€kb/*title€kb€kb€kb€kb€kb€kbtitle>	</head>	<o€kbbody>	</body></html>€ku€ku€ku€ku€ku€kr€kr€kr€kr€kr€kr€kr€kr€ýa'
 
