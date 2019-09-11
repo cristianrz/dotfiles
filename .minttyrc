@@ -9,3 +9,4 @@ BoldAsColour=yes
 FontSmoothing=full
 CursorBlinks=no
 ThemeFile=flat-ui
+FontIsBold=no
