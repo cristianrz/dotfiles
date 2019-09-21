@@ -21,7 +21,7 @@
   <theme>
     <name>waldorf1314</name>
     <titleLayout>NLIMC</titleLayout>
-    <keepBorder>yes</keepBorder>
+    <keepBorder>no</keepBorder>
     <font place="ActiveWindow">
       <name>Rubik</name>
       <size>14</size>
@@ -58,6 +58,7 @@
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
+    <animateIconify>yes</animateIconify>
   </theme>
   <desktops>
     <number>4</number>
@@ -80,10 +81,10 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>20</top>
-    <bottom>20</bottom>
-    <left>20</left>
-    <right>20</right>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>Floating</position>
@@ -205,6 +206,7 @@
       <action name="Focus"/>
     </keybind>
     <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -213,6 +215,7 @@
       </action>
     </keybind>
     <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>50%</x>
         <y>0</y>
@@ -221,6 +224,7 @@
       </action>
     </keybind>
     <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>50%</y>
@@ -229,6 +233,7 @@
       </action>
     </keybind>
     <keybind key="W-Up">
+      <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
