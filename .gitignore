@@ -11,6 +11,12 @@
 !.config/ms-windows/classic-shell/*
 !.config/openbox/
 !.config/openbox/*
+!.config/terminology/
+!.config/terminology/*
+!.config/terminology/config/
+!.config/terminology/config/*
+!.config/terminology/config/standard/
+!.config/terminology/config/standard/*
 !.config/tint2/
 !.config/tint2/*
 !.config/wallpaper/
