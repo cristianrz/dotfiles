@@ -14,7 +14,7 @@ alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
 alias his="history 1000 | grep"
 
 if [ -d "/C/Windows/" ]; then
-  alias firefox="/C/Program\ Files/Mozilla\ Firefox/firefox.exe"
+  :
 else
   # br edits file names in vim
   alias br="vimv;ls -1"
@@ -27,7 +27,6 @@ else
 
   # abreviations of sudo dnf
   dnf -v &> /dev/null && alias snf="sudo dnf"
-  apt -v &> /dev/null && alias snf="sudo apt"
 fi
 
 # Give priority to less over more
