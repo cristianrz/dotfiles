@@ -4,20 +4,12 @@ setlocal
 SET /P AREYOUSURE=Do you want to run startup programs? 
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
-if exist "C:\Program Files (x86)\AutoProxySwitcher\AutoProxySwitcher.exe" (
-	start /min "" "C:\Program Files (x86)\AutoProxySwitcher\AutoProxySwitcher.exe"
-)
-
 if exist "C:\Program Files (x86)\Trend Micro\OfficeScan Client\PccNTMon.exe" (
 	start /min "" "C:\Program Files (x86)\Trend Micro\OfficeScan Client\PccNTMon.exe"
 )
 
 if exist "C:\Program Files\Duplicati 2\Duplicati.GUI.TrayIcon.exe" (
 	start /min "" "C:\Program Files\Duplicati 2\Duplicati.GUI.TrayIcon.exe"
-)
-
-if exist "C:\Program Files\Everything\Everything.exe" (
-	start "" "C:\Program Files\Everything\Everything.exe" -minimized
 )
 
 if exist "C:\Program Files\pia_manager\pia_manager.exe" (
