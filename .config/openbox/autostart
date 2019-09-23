@@ -1,5 +1,5 @@
 ### activate natural scrolling
-xinput set-prop 12 288 1 
+xinput set-prop 12 288 1 &
 
 ### restore wallpaper
 sleep 1; tint2 &
@@ -12,12 +12,8 @@ sleep 0.5; numlockx &
 feh ~/.config/wallpaper/wallpaper.jpg --bg-scale &
 
 ### start redshift settings for uk
-redshift -l 50:1 &
+redshift -l 51:1 &
 
 ### sets keyboard in english us
 setxkbmap us &
-
-xinput --set-prop $(xinput list | grep logitormation Matrix' 0.5 0 0 0 0.5 0 0 0 1 &
-
-syncthing
 
