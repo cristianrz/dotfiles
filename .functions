@@ -56,3 +56,12 @@ function restart(){
 function sorry(){
     sudo $(history | cut -c 8- | tail -n 2 | head -n 1)
 }
+
+function wtch(){
+  while true; do
+    display="$(date)\n\n$($@)"
+    clear
+    printf "$display"
+    sleep 1s
+  done
+}
