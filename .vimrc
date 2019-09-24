@@ -72,3 +72,7 @@ set termguicolors
 colorscheme quantum
 
 set t_te=[H[2J
+
+set backupdir=.vim/,~/.vim/backups/,/tmp/
+set directory=.vim/,~/.vim/backups/,/tmp/
+set undodir=.vim/,~/.vim/backups/,/tmp/
