@@ -1,6 +1,7 @@
 #!/bin/bash
 function ls(){
-  command ls  "$@" --ignore="*ntuser*" --ignore="NTUSER*" --color=auto --group-directories-first
+  command ls  "$@" --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
+    --group-directories-first
 }
 
 # Modifies cd to do an ls everytime you access a directory
@@ -22,7 +23,8 @@ if [ -d "/C/Windows/" ]; then
 else
   # Shows packages installed ordered by size
   function packagesizes(){
-    rpm -qa --qf '%{SIZE} %{NAME}\n' | awk '{printf("%sMb %s\n", $1 / 1000 / 1000, $2)}' | sort -k1 -n
+    rpm -qa --qf '%{SIZE} %{NAME}\n' | awk '{printf("%sMb %s\n", $1 / 1000 / \
+      1000, $2)}' | sort -k1 -n
   }
 fi
 
@@ -64,4 +66,21 @@ function wtch(){
     printf "$display"
     sleep 1s
   done
+}
+
+# I tend to open so many xterm windows instead of using tmux so this is to get
+# used to it...
+function check_xterm(){
+  xterm_open=$(ps -ef | grep xterm | head -n -1 | wc -l)
+  if [ $xterm_open -ge 2 ]; then
+    i=5
+    while [ $i -gt 0 ]; do
+      clear
+      echo "You already have an xterm open. Use it! This is going to close in \
+$i seconds..."
+      i=$((i-1))
+      sleep 1s
+    done
+    exit
+  fi
 }
