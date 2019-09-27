@@ -156,7 +156,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>xterm -e "vifm"</command>
       </action>
     </keybind>
     <keybind key="W-z">
