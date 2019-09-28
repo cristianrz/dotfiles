@@ -200,7 +200,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>xterm</command>
+        <command>wmctrl -a "tmux"</command>
       </action>
       <action name="Focus"/>
     </keybind>
