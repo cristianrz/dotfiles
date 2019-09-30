@@ -101,12 +101,12 @@
     <chainQuitKey/>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight -dec 10</command>
+        <command>xbacklight -dec 5</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight -inc 10</command>
+        <command>xbacklight -inc 5</command>
       </action>
     </keybind>
     <keybind key="W-1">
@@ -156,7 +156,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>xterm -e &quot;vifm&quot;</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -200,7 +200,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>terminology</command>
+        <command>wmctrl -a "tmux"</command>
       </action>
       <action name="Focus"/>
     </keybind>
@@ -211,6 +211,42 @@
         <y>0</y>
         <width>50%</width>
         <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-q">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-a">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
       </action>
     </keybind>
     <keybind key="W-Right">
