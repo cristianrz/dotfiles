@@ -17,3 +17,4 @@ redshift -l 51:1 &
 ### sets keyboard in english us
 setxkbmap us &
 
+xinput --set-prop Elan Touchpad libinput Natural Scrolling Enabled 1 &
