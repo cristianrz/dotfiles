@@ -4,12 +4,6 @@ Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\one.png   
 ; Functionalities
 ; ---------------
 
-; Disable Caps Lock
-CapsLock::
-Send {LWin down}{Tab}{LWin up}
-return
-
-
 ; Disables alt F4
 !F4::
 return
@@ -49,7 +43,7 @@ return
 
 ; [Win + Enter] opens terminal
 LWin & Enter::
-Run "C:\Users\%A_UserName%\AppData\Local\hyper\Hyper.exe", Max
+Run "C:\tools\msys64\msys2.exe", Max
 return
 
 ; [Win + f] puts window in full screen
