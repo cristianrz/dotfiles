@@ -1,19 +1,3 @@
-Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\one.png   ;Changes menu tray ico
-
-; ---------------
-; Functionalities
-; ---------------
-
-; Disables alt F4
-!F4::
-return
-
-
-~LWin Up::
-return
-
-~RWin Up::
-return
 
 ; -------
 ; Hotkeys
@@ -43,7 +27,7 @@ return
 
 ; [Win + Enter] opens terminal
 LWin & Enter::
-Run "C:\tools\msys64\msys2.exe", Max
+Run, C:\Users\%A_UserName%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk, Max
 return
 
 ; [Win + f] puts window in full screen
@@ -51,16 +35,14 @@ return
 Send {LWin down}{Up}{LWin up}
 return
 
-; [Win + Space] opens Everything
-#Space::
-Run, C:\Program Files\Everything\Everything.exe , Max
-return
 
 ; ----------
 ; Hotstrings
 ; ----------
 
-::_n_::ñ
+Alt & n::
+Send ñ
+return
 
 Alt & a::
 Send á
@@ -82,80 +64,38 @@ Alt & u::
 Send ú
 return
 
+; Moves windows with alt + drag
 
-LWin & 1::
-Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\one.png   ;Changes menu tray ico
-if (desktop = 1){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-} else if (desktop = 2){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-} else if (desktop = 3){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-} else if (desktop = 4){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-}
-desktop = 1
+Alt & LButton::
+CoordMode, Mouse  ; Switch to screen/absolute coordinates.
+MouseGetPos, EWD_MouseStartX, EWD_MouseStartY, EWD_MouseWin
+WinGetPos, EWD_OriginalPosX, EWD_OriginalPosY,,, ahk_id %EWD_MouseWin%
+WinGet, EWD_WinState, MinMax, ahk_id %EWD_MouseWin% 
+if EWD_WinState = 0  ; Only if the window isn't maximized 
+    SetTimer, EWD_WatchMouse, 10 ; Track the mouse as the user drags it.
 return
 
-LWin & 2::
-Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\two.png   ;Changes menu tray ico
-if (desktop = 1){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 2){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 3){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-} else if (desktop = 4){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
+EWD_WatchMouse:
+GetKeyState, EWD_LButtonState, LButton, P
+if EWD_LButtonState = U  ; Button has been released, so drag is complete.
+{
+    SetTimer, EWD_WatchMouse, off
+    return
 }
-
-desktop = 2
-return
-
-LWin & 3::
-Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\three.png   ;Changes menu tray ico
-if (desktop = 1){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 2){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 3){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
-} else if (desktop = 4){
-  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
+GetKeyState, EWD_EscapeState, Escape, P
+if EWD_EscapeState = D  ; Escape has been pressed, so drag is cancelled.
+{
+    SetTimer, EWD_WatchMouse, off
+    WinMove, ahk_id %EWD_MouseWin%,, %EWD_OriginalPosX%, %EWD_OriginalPosY%
+    return
 }
-
-desktop = 3
-return
-
-LWin & 4::
-Menu, Tray, Icon, C:\Users\%A_UserName%\.config\ms-windows\autohotkey\four.png   ;Changes menu tray ico
-if (desktop = 1){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 2){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 3){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-} else if (desktop = 4){
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
-}
-
-desktop = 4
+; Otherwise, reposition the window to match the change in mouse coordinates
+; caused by the user having dragged the mouse:
+CoordMode, Mouse
+MouseGetPos, EWD_MouseX, EWD_MouseY
+WinGetPos, EWD_WinX, EWD_WinY,,, ahk_id %EWD_MouseWin%
+SetWinDelay, -1   ; Makes the below move faster/smoother.
+WinMove, ahk_id %EWD_MouseWin%,, EWD_WinX + EWD_MouseX - EWD_MouseStartX, EWD_WinY + EWD_MouseY - EWD_MouseStartY
+EWD_MouseStartX := EWD_MouseX  ; Update for the next timer-call to this subroutine.
+EWD_MouseStartY := EWD_MouseY
 return
