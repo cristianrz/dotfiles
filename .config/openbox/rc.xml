@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>50</strength>
@@ -278,12 +279,12 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>sh -c &quot;pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +10%&quot;</command>
+        <command>sh -c "pactl set-sink-mute 1 false ; pactl set-sink-volume 1 +10%"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>sh -c &quot;pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -10%&quot;</command>
+        <command>sh -c "pactl set-sink-mute 1 false ; pactl set-sink-volume 1 -10%"</command>
       </action>
     </keybind>
   </keyboard>
