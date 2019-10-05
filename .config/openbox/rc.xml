@@ -23,37 +23,37 @@
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <font place="ActiveWindow">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -147,7 +147,7 @@
     </keybind>
     <keybind key="A-2">
       <action name="Execute">
-        <command>dmenu</command>
+        <command>dmenu_run</command>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
