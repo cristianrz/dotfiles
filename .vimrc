@@ -49,6 +49,7 @@ Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'pangloss/vim-javascript'
+Plug 'briancollins/vim-jst'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
