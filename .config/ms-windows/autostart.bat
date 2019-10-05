@@ -16,8 +16,8 @@ if exist "C:\Program Files\pia_manager\pia_manager.exe" (
 	start /min "" "C:\Program Files\pia_manager\pia_manager.exe"
 )
 
-if exist "C:\ProgramData\Microsoft\Windows\start /min Menu\Programs\Skype for Business 2016.lnk" (
-	start /min "" "C:\ProgramData\Microsoft\Windows\start /min Menu\Programs\Skype for Business 2016.lnk"
+if exist "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business 2016.lnk" (
+	start /min "" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business 2016.lnk"
 )
 
 if exist "C:\Users\%USERNAME%\.config\ms-windows\autohotkey\keyboard-shortcuts.ahk" (
