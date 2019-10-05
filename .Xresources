@@ -1,43 +1,45 @@
 ! special
-*.foreground:   #c5c8c6
-*.background:   #263238
-*.cursorColor:  #c5c8c6
+*.foreground:   #ABB2BF
+*.background:   #282C34
+*.cursorColor:  #ABB2BF
 
 ! black
-*.color0:       #212d32
-*.color8:       #37474f
+*.color0:       #282C34
+*.color8:       #3E4452
 
 ! red
-*.color1:       #ec5f67
-*.color9:       #f77669
+*.color1:       #E06C75
+*.color9:       #BE5046
 
 ! green
-*.color2:       #8bd649
-*.color10:      #c3e88d
+*.color2:       #98C379
+*.color10:      #98C379
 
 ! yellow
-*.color3:       #f1e655
-*.color11:      #f8e71c
+*.color3:       #E5C07B
+*.color11:      #D19A66
 
 ! blue
-*.color4:       #85678f
-*.color12:      #5f819d
+*.color4:       #61AFEF
+*.color12:      #61AFEF
 
 ! magenta
-*.color5:       #7986cb
-*.color13:      #82b1ff
+*.color5:       #C678DD
+*.color13:      #C678DD
 
 ! cyan
-*.color6:       #5c7e8c
-*.color14:      #80cbc4
+*.color6:       #56B6C2
+*.color14:      #56B6C2
 
 ! white
-*.color7:       #707880
-*.color15:      #cdd3de
+*.color7:       #ABB2BF
+*.color15:      #5C6370
 
 
-*faceName: Inconsolata:pixelsize=26
+*faceName: Droid Sans Mono:pixelsize=24
 XTerm*allowBoldFonts: false
 
 xTerm*scrollBar: off
 xterm*scrollBar: false
+
+URxvt.font: xft:Consolas:size=22
