@@ -140,6 +140,11 @@
         <command>xterm -e "vifm"</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>xterm -e tmux</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <command>slock</command>
