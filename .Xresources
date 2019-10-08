@@ -1,42 +1,36 @@
-! special
-*.foreground:   #c5c8c6
-*.background:   #263238
-*.cursorColor:  #c5c8c6
+! Custom
+! Original theme https://github.com/nathanbuchar/atom-one-dark-terminal
+*.foreground:    #ABB2BF
+*.background:    #1E2127
+*.cursorColor:   #5C6370
+*.highlightColor:#3A3F4B
 
-! black
-*.color0:       #212d32
-*.color8:       #37474f
+! Negro y gris
+*.color0:        #1E2127
+*.color8:        #5C6370
+! Rojos
+*.color1:        #E06C75
+*.color9:        #E06C75
+! Verde
+*.color2:        #98C379
+*.color10:       #98C379
+! Amarillo
+*.color3:        #D19A66
+*.color11:       #D19A66
+! Azul
+*.color4:        #61AFEF
+*.color12:       #61AFEF
+! Magenta
+*.color5:        #C678DD
+*.color13:       #C678DD
+! Cyan
+*.color6:        #56B6C2
+*.color14:       #56B6C2
+! Blanco
+*.color7:        #ABB2BF
+*.color15:       #FFFFFF
 
-! red
-*.color1:       #ec5f67
-*.color9:       #f77669
-
-! green
-*.color2:       #8bd649
-*.color10:      #c3e88d
-
-! yellow
-*.color3:       #f1e655
-*.color11:      #f8e71c
-
-! blue
-*.color4:       #85678f
-*.color12:      #5f819d
-
-! magenta
-*.color5:       #7986cb
-*.color13:      #82b1ff
-
-! cyan
-*.color6:       #5c7e8c
-*.color14:      #80cbc4
-
-! white
-*.color7:       #707880
-*.color15:      #cdd3de
-
-
-*faceName: Inconsolata:pixelsize=28
+*faceName: Droid Sans Mono:pixelsize=24
 XTerm*allowBoldFonts: false
 
 xTerm*scrollBar: off

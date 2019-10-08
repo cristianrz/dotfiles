@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>50</strength>
@@ -18,41 +19,41 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>waldorf1314</name>
+    <name>Syscrash</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <font place="ActiveWindow">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveWindow">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuHeader">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="MenuItem">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Rubik</name>
+      <name>Roboto</name>
       <size>14</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
@@ -109,44 +110,16 @@
         <command>xbacklight -inc 5</command>
       </action>
     </keybind>
-    <keybind key="W-1">
-      <action name="Desktop">
-        <desktop>1</desktop>
+    <keybind key="C-W-Right">
+      <action name="GoToDesktop">
+        <to>next</to>
+        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="A-2">
-      <action name="Execute">
-        <command>dmenu_run</command>
-      </action>
-    </keybind>
-    <keybind key="W-p">
-      <action name="Execute">
-        <command>lxrandr</command>
-      </action>
-    </keybind>
-    <keybind key="W-d">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
-    <keybind key="W-l">
-      <action name="Execute">
-        <command>slock</command>
-      </action>
-    </keybind>
-    <keybind key="W-2">
-      <action name="Desktop">
-        <desktop>2</desktop>
-      </action>
-    </keybind>
-    <keybind key="W-3">
-      <action name="Desktop">
-        <desktop>3</desktop>
-      </action>
-    </keybind>
-    <keybind key="W-4">
-      <action name="Desktop">
-        <desktop>4</desktop>
+    <keybind key="C-W-Left">
+      <action name="GoToDesktop">
+        <to>previous</to>
+        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="A-Tab">
@@ -154,9 +127,32 @@
         <dialog>icons</dialog>
       </action>
     </keybind>
+    <keybind key="W-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="W-S-d">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>xterm -e &quot;vifm&quot;</command>
+        <command>xterm -e "vifm"</command>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <command>slock</command>
+      </action>
+    </keybind>
+    <keybind key="A-2">
+      <action name="Execute">
+        <command>dmenu_run</command>
+      </action>
+    </keybind>
+    <keybind key="C-S-Escape">
+      <action name="Execute">
+        <command>xterm -e top</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -186,15 +182,6 @@
     <keybind key="W-f">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="W-A-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
-      <action name="MoveResizeTo">
-        <x>-0</x>
-        <y>0</y>
-        <width>50%</width>
-      </action>
-    </keybind>
     <keybind key="S-W-q">
       <action name="Close"/>
     </keybind>
@@ -203,15 +190,6 @@
         <command>wmctrl -a "tmux"</command>
       </action>
       <action name="Focus"/>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
     </keybind>
     <keybind key="W-q">
       <action name="UnmaximizeFull"/>
@@ -249,6 +227,15 @@
         <height>50%</height>
       </action>
     </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -278,12 +265,12 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>sh -c &quot;pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +10%&quot;</command>
+        <command>sh -c "pactl set-sink-mute 1 false ; pactl set-sink-volume 1 +10%"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>sh -c &quot;pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -10%&quot;</command>
+        <command>sh -c "pactl set-sink-mute 1 false ; pactl set-sink-volume 1 -10%"</command>
       </action>
     </keybind>
   </keyboard>
