@@ -40,3 +40,7 @@ alias mv="mv -v"
 alias cp="cp -v"
 alias mkdir="mkdir -v"
 alias vi="vim"
+
+alias sdu="sudo dnf upgrade -y"
+alias sdi="sudo dnf install -y"
+alias sdr="sudo dnf remove -y"

@@ -29,7 +29,5 @@ if [ -f "$HOME/.local-env" ];  then
 		. "$HOME/.local-env"
 fi
 
-check_xterm
-
 # Uses the previously defined cd function when you open a terminal
 cd . || exit
