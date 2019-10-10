@@ -155,6 +155,11 @@
         <command>xterm -e top</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>xterm -e tmux</command>
+      </action>
+    </keybind>
     <keybind key="W-z">
       <action name="SendToDesktop">
         <desktop>1</desktop>
