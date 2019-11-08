@@ -1,5 +1,3 @@
-
-; -------
 ; Hotkeys
 ; -------
 
@@ -41,27 +39,27 @@ return
 ; ----------
 
 Alt & n::
-Send ñ
+Send ï¿½
 return
 
 Alt & a::
-Send á
+Send ï¿½
 return
 
 Alt & e::
-Send é
+Send ï¿½
 return
 
 Alt & i::
-Send í
+Send ï¿½
 return
 
 Alt & o::
-Send ó
+Send ï¿½
 return
 
 Alt & u::
-Send ú
+Send ï¿½
 return
 
 ; Moves windows with alt + drag
@@ -89,6 +87,7 @@ if EWD_EscapeState = D  ; Escape has been pressed, so drag is cancelled.
     WinMove, ahk_id %EWD_MouseWin%,, %EWD_OriginalPosX%, %EWD_OriginalPosY%
     return
 }
+
 ; Otherwise, reposition the window to match the change in mouse coordinates
 ; caused by the user having dragged the mouse:
 CoordMode, Mouse
@@ -99,3 +98,13 @@ WinMove, ahk_id %EWD_MouseWin%,, EWD_WinX + EWD_MouseX - EWD_MouseStartX, EWD_Wi
 EWD_MouseStartX := EWD_MouseX  ; Update for the next timer-call to this subroutine.
 EWD_MouseStartY := EWD_MouseY
 return
+
+SetTitleMatchMode, 2
+
+; Search in outlook
+#IfWinActive, ahk_exe OUTLOOK.exe
+^f::
+  Send {Ctrl down}b{Ctrl up}
+	Send {End}{Shift down}{Home}{Shift up}
+Return
+#IfWinActive 
