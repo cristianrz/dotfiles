@@ -54,11 +54,6 @@ function restart(){
 	pkill "$@" && start "$@"
 }
 
-# Repeat the last command as sudo
-function sorry(){
-    sudo $(history | cut -c 8- | tail -n 2 | head -n 1)
-}
-
 function wtch(){
   while true; do
     display="$(date)\n\n$($@)"
@@ -68,23 +63,7 @@ function wtch(){
   done
 }
 
-# I tend to open so many xterm windows instead of using tmux so this is to get
-# used to it...
-function check_xterm(){
-  xterm_open=$(ps -ef | grep xterm | head -n -1 | wc -l)
-  if [ $xterm_open -ge 2 ]; then
-    i=5
-    while [ $i -gt 0 ]; do
-      clear
-      echo "You already have an xterm open. Use it! This is going to close in \
-$i seconds..."
-      i=$((i-1))
-      sleep 1s
-    done
-    exit
-  fi
-}
-
+# Checks the process associated with a window
 function xid(){
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps `cat`
 }
