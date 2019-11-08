@@ -1,3 +1,0 @@
-#!/bin/sh
-mv -fv "/c/Users/$(whoami)/Desktop/"* /h/tmp/
-mv -fv "/c/Users/$(whoami)/Downloads/"* /h/tmp/
