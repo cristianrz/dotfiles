@@ -19,7 +19,7 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>Syscrash</name>
+    <name>Plata</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <font place="ActiveWindow">
@@ -58,7 +58,7 @@
       <weight>Normal</weight>
       <slant>Normal</slant>
     </font>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
   </theme>
   <desktops>
     <number>4</number>
@@ -138,6 +138,11 @@
     <keybind key="W-e">
       <action name="Execute">
         <command>xterm -e "vifm"</command>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>xterm -e tmux</command>
       </action>
     </keybind>
     <keybind key="W-l">
