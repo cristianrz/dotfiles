@@ -2,7 +2,7 @@
 <Settings component="StartMenu" version="4.3.1">
 	<MenuStyle value="Classic1"/>
 	<MouseClick value="ClassicMenu"/>
-	<ShiftClick value="Nothing"/>
+	<ShiftClick value="WindowsMenu"/>
 	<WinKey value="Nothing"/>
 	<ShiftWin value="Nothing"/>
 	<CSMHotkey value="1074"/>
@@ -26,7 +26,7 @@
 	<RecentPrograms value="None"/>
 	<RecentMetroApps value="0"/>
 	<StartScreenShortcut value="0"/>
-	<AutoStart value="0"/>
+	<AutoStart value="1"/>
 	<HighlightNew value="0"/>
 	<CheckWinUpdates value="0"/>
 	<EnableDragDrop value="0"/>
@@ -59,10 +59,10 @@
 	<StartButtonPath value="%USERPROFILE%\Downloads\alienware apkpure large.png"/>
 	<StartButtonSize value="35"/>
 	<StartButtonAlign value="0"/>
-	<CustomTaskbar value="1"/>
+	<CustomTaskbar value="0"/>
 	<TaskbarLook value="Opaque"/>
-	<TaskbarOpacity value="80"/>
-	<TaskbarColor value="4207662"/>
+	<TaskbarOpacity value="30"/>
+	<TaskbarColor value="0"/>
 	<TaskbarTextColor value="16052203"/>
 	<TaskbarTexture value=""/>
 	<TaskbarTileH value="Stretch"/>
