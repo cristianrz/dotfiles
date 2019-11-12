@@ -1,20 +1,26 @@
 #!/bin/bash
-function ls(){
-  command ls  "$@" --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
+function ls() {
+  command ls "$@" -a --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
     --group-directories-first
 }
 
 # Modifies cd to do an ls everytime you access a directory
-function cd(){
+function cd() {
   if builtin cd "$@"; then
-    pwd; echo ""; ls .; echo ""
+    pwd
+    echo ""
+    ls .
+    echo ""
   elif [[ "$1" == "." ]]; then
-    pwd; echo ""; ls .; echo ""
+    pwd
+    echo ""
+    ls .
+    echo ""
   fi
 }
 
 # Find by name and is case insensitive
-function search(){
+function search() {
   find . -iname "*$1*"
 }
 
@@ -22,69 +28,47 @@ if [ -d "/C/Windows/" ]; then
   :
 else
   # Shows packages installed ordered by size
-  function packagesizes(){
+  function packagesizes() {
     rpm -qa --qf '%{SIZE} %{NAME}\n' | awk '{printf("%sMb %s\n", $1 / 1000 / \
       1000, $2)}' | sort -k1 -n
   }
 fi
 
-function extract(){
+function extract() {
   case "$1" in
-      *.tar.bz2)   tar xjf "$1"     ;;
-      *.tar.gz)    tar xzf "$1"     ;;
-      *.bz2)       bunzip2 "$1"     ;;
-      *.rar)       unrar e "$1"     ;;
-      *.gz)        gunzip "$1"      ;;
-      *.tar)       tar xf "$1"      ;;
-      *.tbz2)      tar xjf "$1"     ;;
-      *.tgz)       tar xzf "$1"     ;;
-      *.zip)       unzip "$1"       ;;
-      *.Z)         uncompress "$1"  ;;
-      *.7z)        7za e "$1"       ;;
-      *.tar.xz)    tar xf "$1"      ;;
-      *)           echo "'$1' cannot be extracted" ;;
+  *.tar.bz2) tar xjf "$1" ;;
+  *.tar.gz) tar xzf "$1" ;;
+  *.bz2) bunzip2 "$1" ;;
+  *.rar) unrar e "$1" ;;
+  *.gz) gunzip "$1" ;;
+  *.tar) tar xf "$1" ;;
+  *.tbz2) tar xjf "$1" ;;
+  *.tgz) tar xzf "$1" ;;
+  *.zip) unzip "$1" ;;
+  *.Z) uncompress "$1" ;;
+  *.7z) 7za e "$1" ;;
+  *.tar.xz) tar xf "$1" ;;
+  *) echo "'$1' cannot be extracted" ;;
   esac
 }
 
-function start(){
-	"$@" &> /dev/null &
+function start() {
+  "$@" &>/dev/null &
 }
 
-function restart(){
-	pkill "$@" && start "$@"
+function restart() {
+  pkill "$@" && start "$@"
 }
 
-# Repeat the last command as sudo
-function sorry(){
-    sudo $(history | cut -c 8- | tail -n 2 | head -n 1)
-}
-
-function wtch(){
+function wtch() {
   while true; do
-    display="$(date)\n\n$($@)"
+    display="$(date)\n\n$("$@")"
     clear
-    printf "$display"
+    printf "%s" "$display"
     sleep 1s
   done
 }
 
-# I tend to open so many xterm windows instead of using tmux so this is to get
-# used to it...
-function check_xterm(){
-  xterm_open=$(ps -ef | grep xterm | head -n -1 | wc -l)
-  if [ $xterm_open -ge 2 ]; then
-    i=5
-    while [ $i -gt 0 ]; do
-      clear
-      echo "You already have an xterm open. Use it! This is going to close in \
-$i seconds..."
-      i=$((i-1))
-      sleep 1s
-    done
-    exit
-  fi
-}
-
-function xid(){
-  xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps `cat`
+function xid() {
+  xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps $(cat)
 }
