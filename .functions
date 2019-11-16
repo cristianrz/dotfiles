@@ -88,3 +88,8 @@ $i seconds..."
 function xid(){
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps `cat`
 }
+
+function phone(){
+  mkdir -p /home/$(whoami)/phone_ftp/
+  sshfs ${1}:/storage/emulated/0 /home/$(whoami)/phone_ftp/ -p 1234
+}
