@@ -1,0 +1,80 @@
+#!/bin/bash
+function ls() {
+  command ls "$@" -a --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
+    --group-directories-first
+}
+
+# Modifies cd to do an ls everytime you access a directory
+function cd() {
+  if builtin cd "$@"; then
+    pwd
+    echo ""
+    ls .
+    echo ""
+  elif [[ "$1" == "." ]]; then
+    pwd
+    echo ""
+    ls .
+    echo ""
+  fi
+}
+
+# Find by name and is case insensitive
+function search() {
+  find . -iname "*$1*"
+}
+
+if [ -d "/C/Windows/" ]; then
+  :
+else
+  # Shows packages installed ordered by size
+  function packagesizes() {
+    rpm -qa --qf '%{SIZE} %{NAME}\n' | awk '{printf("%sMb %s\n", $1 / 1000 / \
+      1000, $2)}' | sort -k1 -n
+  }
+fi
+
+function extract() {
+  case "$1" in
+  *.tar.bz2) tar xjf "$1" ;;
+  *.tar.gz) tar xzf "$1" ;;
+  *.bz2) bunzip2 "$1" ;;
+  *.rar) unrar e "$1" ;;
+  *.gz) gunzip "$1" ;;
+  *.tar) tar xf "$1" ;;
+  *.tbz2) tar xjf "$1" ;;
+  *.tgz) tar xzf "$1" ;;
+  *.zip) unzip "$1" ;;
+  *.Z) uncompress "$1" ;;
+  *.7z) 7za e "$1" ;;
+  *.tar.xz) tar xf "$1" ;;
+  *) echo "'$1' cannot be extracted" ;;
+  esac
+}
+
+function start() {
+  "$@" &>/dev/null &
+}
+
+function restart() {
+  pkill "$@" && start "$@"
+}
+
+function wtch() {
+  while true; do
+    display="$(date)\n\n$("$@")"
+    clear
+    printf "%s" "$display"
+    sleep 1s
+  done
+}
+
+# Checks the process associated with a window
+function xid() {
+  xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps $(cat)
+}
+
+function phone(){
+  mkdir -p /home/$(whoami)/phone_ftp/
+  sshfs ${1}:/storage/emulated/0 /home/$(whoami)/phone_ftp/ -p 1234
+}
