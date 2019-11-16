@@ -5,29 +5,24 @@
 [[ $- == *i* ]] || return
 
 if [[ $(pwd) == *system32* ]]; then
-	   cd || exit
+	cd || exit
 fi
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-		. /etc/bashrc
-fi
+# shellcheck disable=SC1091
+[[ -f /etc/bashrc ]] && . /etc/bashrc
 
-if [ -f "$HOME/.env" ]; then
-		. "$HOME/.env"
-fi
+# shellcheck disable=SC1090
+[[ -f "$HOME/.env" ]] && . "$HOME/.env"
 
-if [ -f "$HOME/.alias" ];  then
-		. "$HOME/.alias"
-fi
+# shellcheck disable=SC1090
+[[ -f "$HOME/.alias" ]] && . "$HOME/.alias"
 
-if [ -f "$HOME/.functions" ];  then
-		. "$HOME/.functions"
-fi
+# shellcheck disable=SC1090
+[[ -f "$HOME/.functions" ]] && . "$HOME/.functions"
 
-if [ -f "$HOME/.local-env" ];  then
-		. "$HOME/.local-env"
-fi
+# shellcheck disable=SC1090
+[[ -f "$HOME/.local-env" ]] && . "$HOME/.local-env"
 
 # Uses the previously defined cd function when you open a terminal
 cd . || exit
