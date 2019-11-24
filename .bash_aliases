@@ -16,9 +16,6 @@ alias his="history 1000 | grep"
 # br edits file names in vim
 alias br="vimv;ls -1"
 
-# ccat prints cat with colours 
-alias ccat='highlight -n -O ansi --force'
-
 # grep with colours
 alias grep="grep --color=auto"
 
@@ -32,6 +29,5 @@ alias :q="exit"
 alias mv="mv -v"
 alias cp="cp -v"
 alias mkdir="mkdir -v"
-alias vi="vim"
 alias poweroff="echo 'Please shutdown -h now instead'"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
