@@ -29,8 +29,7 @@ if [ -d "/C/Windows/" ]; then
 else
   # Shows packages installed ordered by size
   function packagesizes() {
-    rpm -qa --qf '%{SIZE} %{NAME}\n' | awk '{printf("%sMb %s\n", $1 / 1000 / \
-      1000, $2)}' | sort -k1 -n
+    dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
   }
 fi
 
