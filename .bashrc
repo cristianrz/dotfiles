@@ -1,3 +1,4 @@
+#!/bin/env bash
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # If not running interactively, don't do anything
@@ -47,9 +48,8 @@ fi
 # shellcheck disable=SC1090
 [[ -f "$HOME/.env" ]] && . "$HOME/.env"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# shellcheck disable=SC1090
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 # shellcheck disable=SC1090
 [[ -f "$HOME/.functions" ]] && . "$HOME/.functions"
@@ -57,5 +57,10 @@ fi
 # shellcheck disable=SC1090
 [[ -f "$HOME/.local-env" ]] && . "$HOME/.local-env"
 
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # Uses the previously defined cd function when you open a terminal
 cd . || exit
+
