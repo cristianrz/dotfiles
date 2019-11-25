@@ -6,17 +6,11 @@ function ls() {
 
 # Modifies cd to do an ls everytime you access a directory
 function cd() {
-  if builtin cd "$@"; then
-    pwd
-    echo ""
-    ls .
-    echo ""
-  elif [[ "$1" == "." ]]; then
-    pwd
-    echo ""
-    ls .
-    echo ""
-  fi
+  builtin cd "$@"
+  pwd
+  echo ""
+  ls .
+  echo ""
 }
 
 # Find by name and is case insensitive
@@ -24,14 +18,10 @@ function search() {
   find . -iname "*$1*"
 }
 
-if [ -d "/C/Windows/" ]; then
-  :
-else
-  # Shows packages installed ordered by size
-  function packagesizes() {
-    dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
-  }
-fi
+# Shows packages installed ordered by size
+function packagesizes() {
+  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib
+}
 
 function extract() {
   case "$1" in
@@ -61,7 +51,7 @@ function restart() {
 
 function wtch() {
   while true; do
-    display="$(date)\n\n$("$@")"
+    display="$(date)\\n\\n$("$@")"
     clear
     printf "%s" "$display"
     sleep 1s
@@ -70,10 +60,10 @@ function wtch() {
 
 # Checks the process associated with a window
 function xid() {
-  xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps $(cat)
+  xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps "$(cat)"
 }
 
 function phone(){
-  mkdir -p /home/$(whoami)/phone_ftp/
-  sshfs ${1}:/storage/emulated/0 /home/$(whoami)/phone_ftp/ -p 1234
+  mkdir -p /home/"$(whoami)"/phone_ftp/
+  sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
 }
