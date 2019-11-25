@@ -98,13 +98,6 @@
     <moveButton>Middle</moveButton>
   </dock>
   <keyboard>
-    <chainQuitKey/>
-    <keybind key="C-W-Left">
-      <action name="GoToDesktop">
-        <to>previous</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
         <dialog>icons</dialog>
@@ -118,30 +111,35 @@
         <command>slock</command>
       </action>
     </keybind>
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>qterminal -e tmux</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <command>pcmanfm-qt</command>
       </action>
     </keybind>
-    <keybind key="W-z">
+    <keybind key="S-W-exclam">
       <action name="SendToDesktop">
         <desktop>1</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-x">
+    <keybind key="S-W-at">
       <action name="SendToDesktop">
         <desktop>2</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-c">
+    <keybind key="S-W-numbersign">
       <action name="SendToDesktop">
         <desktop>3</desktop>
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-v">
+    <keybind key="S-W-dollar">
       <action name="SendToDesktop">
         <desktop>4</desktop>
         <follow>no</follow>
@@ -489,6 +487,7 @@
   <applications>
     <application class="*">
       <decor>no</decor>
+      <maximized>true</maximized>
     </application>
     <application name="oblogout">
       <position force="no">
