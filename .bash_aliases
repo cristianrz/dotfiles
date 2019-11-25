@@ -29,5 +29,5 @@ alias :q="exit"
 alias mv="mv -v"
 alias cp="cp -v"
 alias mkdir="mkdir -v"
-alias poweroff="echo 'Please shutdown -h now instead'"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
