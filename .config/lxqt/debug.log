@@ -1,0 +1,727 @@
+2019-11-25 07:05:11.055 (0x7ffd799ce900) Debug: New PolkitAgentListener  0x55e0c9e4a680
+2019-11-25 07:05:11.055 (0x7ffd799ce900) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7ffd799ce910) for  0x55e0c9e4a680
+2019-11-25 07:05:11.389 (0x7ffc5cde6580) Debug: systemd: "CanHibernate" = "yes"
+2019-11-25 07:05:11.418 (0x7ffc5cde6580) Debug: systemd: "CanSuspend" = "yes"
+2019-11-25 07:05:11.427 (0x7ffdd8a88d80) Debug: systemd: "CanReboot" = "yes"
+2019-11-25 07:05:11.433 (0x7ffdd8a88d80) Debug: systemd: "CanPowerOff" = "yes"
+2019-11-25 07:05:11.536 (0x7ffc00f8d150) Debug: ()
+2019-11-25 07:05:11.852 (0x7ffc00f8d150) Debug: WinIdChange 1200008 handle QWidgetWindow(0x55be0857f3b0, name="LXQtPanel panel1Window") QScreen(0x55be0822be70, name="eDP-1")
+2019-11-25 07:05:11.877 (0x7ffc00f8d150) Debug: Systray started
+2019-11-25 07:05:12.056 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 100 actionTime: QTime(Invalid)
+2019-11-25 07:05:12.062 (0x7ffc6d8258a0) Debug: Inhibit got: 30
+2019-11-25 07:05:12.203 (0x7ffc6d8258a0) Debug: Starting idlenesswatcher
+2019-11-25 07:07:05.322 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:18:54.331 (0x7ffc2e6c87e0) Debug: No outputs have backlight property
+2019-11-25 07:18:54.331 (0x7ffc2e6c87e0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Found output: "DP-1"
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Output is not connected
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Output is not connected
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Found output: "DP-2"
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Output is not connected
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:54.332 (0x7ffc2e6c87e0) Debug: Output is not connected
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: No outputs have backlight property
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Found output: "eDP-1"
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Output: "eDP-1" added
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Found output: "DP-1"
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Output is not connected
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Output is not connected
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Found output: "DP-2"
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Output is not connected
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:54.573 (0x7fff72e7ed60) Debug: Output is not connected
+2019-11-25 07:18:54.798 (0x7fff5ef1bb60) Debug: No outputs have backlight property
+2019-11-25 07:18:54.798 (0x7fff5ef1bb60) Debug: Found output: "eDP-1"
+2019-11-25 07:18:54.798 (0x7fff5ef1bb60) Debug: Output: "eDP-1" added
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Found output: "DP-1"
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Output is not connected
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Output is not connected
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Found output: "DP-2"
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Output is not connected
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:54.799 (0x7fff5ef1bb60) Debug: Output is not connected
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: No outputs have backlight property
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Found output: "DP-1"
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Output is not connected
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Output is not connected
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Found output: "DP-2"
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Output is not connected
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:54.987 (0x7ffe94e4eeb0) Debug: Output is not connected
+2019-11-25 07:18:55.154 (0x7ffcd1313f30) Debug: No outputs have backlight property
+2019-11-25 07:18:55.154 (0x7ffcd1313f30) Debug: Found output: "eDP-1"
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Output: "eDP-1" added
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Found output: "DP-1"
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Output is not connected
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Output is not connected
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Found output: "DP-2"
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Output is not connected
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:55.155 (0x7ffcd1313f30) Debug: Output is not connected
+2019-11-25 07:18:55.323 (0x7fff5da31250) Debug: No outputs have backlight property
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Found output: "eDP-1"
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Output: "eDP-1" added
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Found output: "DP-1"
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Output is not connected
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Output is not connected
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Found output: "DP-2"
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Output is not connected
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:55.324 (0x7fff5da31250) Debug: Output is not connected
+2019-11-25 07:18:55.463 (0x7ffd8ce71340) Debug: No outputs have backlight property
+2019-11-25 07:18:55.463 (0x7ffd8ce71340) Debug: Found output: "eDP-1"
+2019-11-25 07:18:55.463 (0x7ffd8ce71340) Debug: Output: "eDP-1" added
+2019-11-25 07:18:55.463 (0x7ffd8ce71340) Debug: Found output: "DP-1"
+2019-11-25 07:18:55.463 (0x7ffd8ce71340) Debug: Output is not connected
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Output is not connected
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Found output: "DP-2"
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Output is not connected
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:55.464 (0x7ffd8ce71340) Debug: Output is not connected
+2019-11-25 07:18:55.658 (0x7ffdec1fe7f0) Debug: No outputs have backlight property
+2019-11-25 07:18:55.658 (0x7ffdec1fe7f0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:55.658 (0x7ffdec1fe7f0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:55.658 (0x7ffdec1fe7f0) Debug: Found output: "DP-1"
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Output is not connected
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Output is not connected
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Found output: "DP-2"
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Output is not connected
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:55.659 (0x7ffdec1fe7f0) Debug: Output is not connected
+2019-11-25 07:18:56.239 (0x7ffee89b5260) Debug: No outputs have backlight property
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Found output: "eDP-1"
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Output: "eDP-1" added
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Found output: "DP-1"
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Output is not connected
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Output is not connected
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Found output: "DP-2"
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Output is not connected
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:56.240 (0x7ffee89b5260) Debug: Output is not connected
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: No outputs have backlight property
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: Found output: "eDP-1"
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: Output: "eDP-1" added
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: Found output: "DP-1"
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: Output is not connected
+2019-11-25 07:18:56.488 (0x7ffda7a48b10) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:56.489 (0x7ffda7a48b10) Debug: Output is not connected
+2019-11-25 07:18:56.489 (0x7ffda7a48b10) Debug: Found output: "DP-2"
+2019-11-25 07:18:56.489 (0x7ffda7a48b10) Debug: Output is not connected
+2019-11-25 07:18:56.489 (0x7ffda7a48b10) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:56.489 (0x7ffda7a48b10) Debug: Output is not connected
+2019-11-25 07:18:56.710 (0x7ffef8de1da0) Debug: No outputs have backlight property
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Found output: "DP-1"
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Output is not connected
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Output is not connected
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Found output: "DP-2"
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Output is not connected
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:56.711 (0x7ffef8de1da0) Debug: Output is not connected
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: No outputs have backlight property
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: Found output: "eDP-1"
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: Output: "eDP-1" added
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: Found output: "DP-1"
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: Output is not connected
+2019-11-25 07:18:56.897 (0x7ffeff06ca00) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:56.898 (0x7ffeff06ca00) Debug: Output is not connected
+2019-11-25 07:18:56.898 (0x7ffeff06ca00) Debug: Found output: "DP-2"
+2019-11-25 07:18:56.898 (0x7ffeff06ca00) Debug: Output is not connected
+2019-11-25 07:18:56.898 (0x7ffeff06ca00) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:56.898 (0x7ffeff06ca00) Debug: Output is not connected
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: No outputs have backlight property
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: Found output: "eDP-1"
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: Output: "eDP-1" added
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: Found output: "DP-1"
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: Output is not connected
+2019-11-25 07:18:57.115 (0x7ffd2d6b8c60) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:57.116 (0x7ffd2d6b8c60) Debug: Output is not connected
+2019-11-25 07:18:57.116 (0x7ffd2d6b8c60) Debug: Found output: "DP-2"
+2019-11-25 07:18:57.116 (0x7ffd2d6b8c60) Debug: Output is not connected
+2019-11-25 07:18:57.116 (0x7ffd2d6b8c60) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:57.116 (0x7ffd2d6b8c60) Debug: Output is not connected
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: No outputs have backlight property
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Found output: "eDP-1"
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Output: "eDP-1" added
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Found output: "DP-1"
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Output is not connected
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Output is not connected
+2019-11-25 07:18:57.343 (0x7ffd23bf1340) Debug: Found output: "DP-2"
+2019-11-25 07:18:57.344 (0x7ffd23bf1340) Debug: Output is not connected
+2019-11-25 07:18:57.344 (0x7ffd23bf1340) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:57.344 (0x7ffd23bf1340) Debug: Output is not connected
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: No outputs have backlight property
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Found output: "DP-1"
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Output is not connected
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Output is not connected
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Found output: "DP-2"
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Output is not connected
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:57.573 (0x7ffd4d8d7da0) Debug: Output is not connected
+2019-11-25 07:18:57.863 (0x7ffc24793b40) Debug: No outputs have backlight property
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Found output: "eDP-1"
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Output: "eDP-1" added
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Found output: "DP-1"
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Output is not connected
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Output is not connected
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Found output: "DP-2"
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Output is not connected
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:57.864 (0x7ffc24793b40) Debug: Output is not connected
+2019-11-25 07:18:58.075 (0x7ffd60eb8800) Debug: No outputs have backlight property
+2019-11-25 07:18:58.076 (0x7ffd60eb8800) Debug: Found output: "eDP-1"
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Output: "eDP-1" added
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Found output: "DP-1"
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Output is not connected
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Output is not connected
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Found output: "DP-2"
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Output is not connected
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:58.085 (0x7ffd60eb8800) Debug: Output is not connected
+2019-11-25 07:18:58.306 (0x7ffc475c6bb0) Debug: No outputs have backlight property
+2019-11-25 07:18:58.306 (0x7ffc475c6bb0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:58.306 (0x7ffc475c6bb0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Found output: "DP-1"
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Output is not connected
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Output is not connected
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Found output: "DP-2"
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Output is not connected
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:58.307 (0x7ffc475c6bb0) Debug: Output is not connected
+2019-11-25 07:18:58.805 (0x7ffcedd8f6f0) Debug: No outputs have backlight property
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Found output: "eDP-1"
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Output: "eDP-1" added
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Found output: "DP-1"
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Output is not connected
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Output is not connected
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Found output: "DP-2"
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Output is not connected
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:58.806 (0x7ffcedd8f6f0) Debug: Output is not connected
+2019-11-25 07:18:59.051 (0x7fff00a95120) Debug: No outputs have backlight property
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Found output: "eDP-1"
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Output: "eDP-1" added
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Found output: "DP-1"
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Output is not connected
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Output is not connected
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Found output: "DP-2"
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Output is not connected
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:59.052 (0x7fff00a95120) Debug: Output is not connected
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: No outputs have backlight property
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Found output: "eDP-1"
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Output: "eDP-1" added
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Found output: "DP-1"
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Output is not connected
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:59.298 (0x7ffc574e8400) Debug: Output is not connected
+2019-11-25 07:18:59.299 (0x7ffc574e8400) Debug: Found output: "DP-2"
+2019-11-25 07:18:59.299 (0x7ffc574e8400) Debug: Output is not connected
+2019-11-25 07:18:59.299 (0x7ffc574e8400) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:59.299 (0x7ffc574e8400) Debug: Output is not connected
+2019-11-25 07:18:59.547 (0x7fffa8044520) Debug: No outputs have backlight property
+2019-11-25 07:18:59.547 (0x7fffa8044520) Debug: Found output: "eDP-1"
+2019-11-25 07:18:59.547 (0x7fffa8044520) Debug: Output: "eDP-1" added
+2019-11-25 07:18:59.547 (0x7fffa8044520) Debug: Found output: "DP-1"
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Output is not connected
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Output is not connected
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Found output: "DP-2"
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Output is not connected
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:59.548 (0x7fffa8044520) Debug: Output is not connected
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: No outputs have backlight property
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Found output: "eDP-1"
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Output: "eDP-1" added
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Found output: "DP-1"
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Output is not connected
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Found output: "HDMI-1"
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Output is not connected
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Found output: "DP-2"
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Output is not connected
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Found output: "HDMI-2"
+2019-11-25 07:18:59.794 (0x7ffd1de4a860) Debug: Output is not connected
+2019-11-25 07:19:00.045 (0x7ffc52fe6ad0) Debug: No outputs have backlight property
+2019-11-25 07:19:00.045 (0x7ffc52fe6ad0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:00.045 (0x7ffc52fe6ad0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:00.045 (0x7ffc52fe6ad0) Debug: Found output: "DP-1"
+2019-11-25 07:19:00.045 (0x7ffc52fe6ad0) Debug: Output is not connected
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Output is not connected
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Found output: "DP-2"
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Output is not connected
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:00.046 (0x7ffc52fe6ad0) Debug: Output is not connected
+2019-11-25 07:19:00.294 (0x7ffe7bc30e50) Debug: No outputs have backlight property
+2019-11-25 07:19:00.294 (0x7ffe7bc30e50) Debug: Found output: "eDP-1"
+2019-11-25 07:19:00.294 (0x7ffe7bc30e50) Debug: Output: "eDP-1" added
+2019-11-25 07:19:00.294 (0x7ffe7bc30e50) Debug: Found output: "DP-1"
+2019-11-25 07:19:00.294 (0x7ffe7bc30e50) Debug: Output is not connected
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Output is not connected
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Found output: "DP-2"
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Output is not connected
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:00.295 (0x7ffe7bc30e50) Debug: Output is not connected
+2019-11-25 07:19:00.540 (0x7ffe60d8f7f0) Debug: No outputs have backlight property
+2019-11-25 07:19:00.540 (0x7ffe60d8f7f0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:00.540 (0x7ffe60d8f7f0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:00.540 (0x7ffe60d8f7f0) Debug: Found output: "DP-1"
+2019-11-25 07:19:00.540 (0x7ffe60d8f7f0) Debug: Output is not connected
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Output is not connected
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Found output: "DP-2"
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Output is not connected
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:00.541 (0x7ffe60d8f7f0) Debug: Output is not connected
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: No outputs have backlight property
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Found output: "DP-1"
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Output is not connected
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Output is not connected
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Found output: "DP-2"
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Output is not connected
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:00.788 (0x7ffea6d59bf0) Debug: Output is not connected
+2019-11-25 07:19:01.067 (0x7ffddb4dc750) Debug: No outputs have backlight property
+2019-11-25 07:19:01.067 (0x7ffddb4dc750) Debug: Found output: "eDP-1"
+2019-11-25 07:19:01.067 (0x7ffddb4dc750) Debug: Output: "eDP-1" added
+2019-11-25 07:19:01.067 (0x7ffddb4dc750) Debug: Found output: "DP-1"
+2019-11-25 07:19:01.067 (0x7ffddb4dc750) Debug: Output is not connected
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Output is not connected
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Found output: "DP-2"
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Output is not connected
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:01.068 (0x7ffddb4dc750) Debug: Output is not connected
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: No outputs have backlight property
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Found output: "eDP-1"
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Output: "eDP-1" added
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Found output: "DP-1"
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Output is not connected
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Output is not connected
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Found output: "DP-2"
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Output is not connected
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:01.315 (0x7ffc7d6b3f60) Debug: Output is not connected
+2019-11-25 07:19:02.455 (0x7ffe0d8be800) Debug: No outputs have backlight property
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Found output: "eDP-1"
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Output: "eDP-1" added
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Found output: "DP-1"
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Output is not connected
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Output is not connected
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Found output: "DP-2"
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Output is not connected
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:02.456 (0x7ffe0d8be800) Debug: Output is not connected
+2019-11-25 07:19:02.692 (0x7fffd36b4170) Debug: No outputs have backlight property
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Found output: "eDP-1"
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Output: "eDP-1" added
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Found output: "DP-1"
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Output is not connected
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Output is not connected
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Found output: "DP-2"
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Output is not connected
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:02.693 (0x7fffd36b4170) Debug: Output is not connected
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: No outputs have backlight property
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Found output: "DP-1"
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Output is not connected
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Output is not connected
+2019-11-25 07:19:02.855 (0x7fff43eafdd0) Debug: Found output: "DP-2"
+2019-11-25 07:19:02.856 (0x7fff43eafdd0) Debug: Output is not connected
+2019-11-25 07:19:02.856 (0x7fff43eafdd0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:02.856 (0x7fff43eafdd0) Debug: Output is not connected
+2019-11-25 07:19:03.052 (0x7ffcc8766a30) Debug: No outputs have backlight property
+2019-11-25 07:19:03.052 (0x7ffcc8766a30) Debug: Found output: "eDP-1"
+2019-11-25 07:19:03.052 (0x7ffcc8766a30) Debug: Output: "eDP-1" added
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Found output: "DP-1"
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Output is not connected
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Output is not connected
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Found output: "DP-2"
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Output is not connected
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:03.053 (0x7ffcc8766a30) Debug: Output is not connected
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: No outputs have backlight property
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Found output: "DP-1"
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Output is not connected
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Output is not connected
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Found output: "DP-2"
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Output is not connected
+2019-11-25 07:19:03.245 (0x7ffeb34b90a0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:03.246 (0x7ffeb34b90a0) Debug: Output is not connected
+2019-11-25 07:19:03.472 (0x7ffc6359e3b0) Debug: No outputs have backlight property
+2019-11-25 07:19:03.472 (0x7ffc6359e3b0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:03.472 (0x7ffc6359e3b0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Found output: "DP-1"
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Output is not connected
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Output is not connected
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Found output: "DP-2"
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Output is not connected
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:03.473 (0x7ffc6359e3b0) Debug: Output is not connected
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: No outputs have backlight property
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Found output: "DP-1"
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Output is not connected
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Output is not connected
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Found output: "DP-2"
+2019-11-25 07:19:03.656 (0x7ffe8267eee0) Debug: Output is not connected
+2019-11-25 07:19:03.657 (0x7ffe8267eee0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:03.657 (0x7ffe8267eee0) Debug: Output is not connected
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: No outputs have backlight property
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Found output: "eDP-1"
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Output: "eDP-1" added
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Found output: "DP-1"
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Output is not connected
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Output is not connected
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Found output: "DP-2"
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Output is not connected
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:03.866 (0x7ffd6ca9af50) Debug: Output is not connected
+2019-11-25 07:19:04.035 (0x7fff63630b10) Debug: No outputs have backlight property
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Found output: "eDP-1"
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Output: "eDP-1" added
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Found output: "DP-1"
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Output is not connected
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Output is not connected
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Found output: "DP-2"
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Output is not connected
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:04.036 (0x7fff63630b10) Debug: Output is not connected
+2019-11-25 07:19:07.660 (0x7ffd9a30f1b0) Debug: No outputs have backlight property
+2019-11-25 07:19:07.660 (0x7ffd9a30f1b0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Found output: "DP-1"
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Found output: "DP-2"
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:07.661 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:16.977 (0x7ffd9a30f1b0) Debug: Found output: "eDP-1"
+2019-11-25 07:19:16.978 (0x7ffd9a30f1b0) Debug: Output: "eDP-1" added
+2019-11-25 07:19:16.979 (0x7ffd9a30f1b0) Debug: Found output: "DP-1"
+2019-11-25 07:19:16.979 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Found output: "HDMI-1"
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Found output: "DP-2"
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Found output: "HDMI-2"
+2019-11-25 07:19:16.981 (0x7ffd9a30f1b0) Debug: Output is not connected
+2019-11-25 07:22:45.060 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 100 actionTime: QTime(Invalid)
+2019-11-25 07:24:46.103 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 99.2426 actionTime: QTime(Invalid)
+2019-11-25 07:26:46.131 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 98.5133 actionTime: QTime(Invalid)
+2019-11-25 07:28:46.140 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 97.7279 actionTime: QTime(Invalid)
+2019-11-25 07:30:46.138 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 96.8864 actionTime: QTime(Invalid)
+2019-11-25 07:31:56.271 (0x7ffccef4d530) Debug: No outputs have backlight property
+2019-11-25 07:31:56.271 (0x7ffccef4d530) Debug: Found output: "eDP-1"
+2019-11-25 07:31:56.271 (0x7ffccef4d530) Debug: Output: "eDP-1" added
+2019-11-25 07:31:56.271 (0x7ffccef4d530) Debug: Found output: "DP-1"
+2019-11-25 07:31:56.271 (0x7ffccef4d530) Debug: Output is not connected
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Found output: "HDMI-1"
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Output is not connected
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Found output: "DP-2"
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Output is not connected
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Found output: "HDMI-2"
+2019-11-25 07:31:56.272 (0x7ffccef4d530) Debug: Output is not connected
+2019-11-25 07:31:56.606 (0x7ffee7e44130) Debug: No outputs have backlight property
+2019-11-25 07:31:56.606 (0x7ffee7e44130) Debug: Found output: "eDP-1"
+2019-11-25 07:31:56.606 (0x7ffee7e44130) Debug: Output: "eDP-1" added
+2019-11-25 07:31:56.606 (0x7ffee7e44130) Debug: Found output: "DP-1"
+2019-11-25 07:31:56.606 (0x7ffee7e44130) Debug: Output is not connected
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Found output: "HDMI-1"
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Output is not connected
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Found output: "DP-2"
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Output is not connected
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Found output: "HDMI-2"
+2019-11-25 07:31:56.607 (0x7ffee7e44130) Debug: Output is not connected
+2019-11-25 07:31:57.071 (0x7fff21944390) Debug: No outputs have backlight property
+2019-11-25 07:31:57.071 (0x7fff21944390) Debug: Found output: "eDP-1"
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Output: "eDP-1" added
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Found output: "DP-1"
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Output is not connected
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Found output: "HDMI-1"
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Output is not connected
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Found output: "DP-2"
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Output is not connected
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Found output: "HDMI-2"
+2019-11-25 07:31:57.072 (0x7fff21944390) Debug: Output is not connected
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: No outputs have backlight property
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Found output: "eDP-1"
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Output: "eDP-1" added
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Found output: "DP-1"
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Output is not connected
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Found output: "HDMI-1"
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Output is not connected
+2019-11-25 07:31:57.386 (0x7ffd5ba8c290) Debug: Found output: "DP-2"
+2019-11-25 07:31:57.387 (0x7ffd5ba8c290) Debug: Output is not connected
+2019-11-25 07:31:57.387 (0x7ffd5ba8c290) Debug: Found output: "HDMI-2"
+2019-11-25 07:31:57.387 (0x7ffd5ba8c290) Debug: Output is not connected
+2019-11-25 07:32:07.114 (0x7ffe1cc8d710) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 12905, resource id: 4456584, major code: 40 (TranslateCoords), minor code: 0
+2019-11-25 07:32:46.098 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 96.2693 actionTime: QTime(Invalid)
+2019-11-25 07:34:24.834 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:34:36.477 (0x7ffd3d599b00) Debug: No outputs have backlight property
+2019-11-25 07:34:36.477 (0x7ffd3d599b00) Debug: Found output: "eDP-1"
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Output: "eDP-1" added
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Found output: "DP-1"
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Output is not connected
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Found output: "HDMI-1"
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Output is not connected
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Found output: "DP-2"
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Output is not connected
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Found output: "HDMI-2"
+2019-11-25 07:34:36.478 (0x7ffd3d599b00) Debug: Output is not connected
+2019-11-25 07:34:46.157 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 95.5961 actionTime: QTime(Invalid)
+2019-11-25 07:35:07.258 (0x7ffd3d599b00) Debug: void LXQt::SingleApplication::activateWindow() activationWindow not set or null
+2019-11-25 07:35:07.270 (0x7fff11db67e0) Debug: No outputs have backlight property
+2019-11-25 07:35:07.270 (0x7fff11db67e0) Debug: Found output: "eDP-1"
+2019-11-25 07:35:07.270 (0x7fff11db67e0) Debug: Output: "eDP-1" added
+2019-11-25 07:35:07.270 (0x7fff11db67e0) Debug: Found output: "DP-1"
+2019-11-25 07:35:07.270 (0x7fff11db67e0) Debug: Output is not connected
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Output is not connected
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Found output: "DP-2"
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Output is not connected
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:07.271 (0x7fff11db67e0) Debug: Output is not connected
+2019-11-25 07:35:08.238 (0x7ffd3d599b00) Debug: void LXQt::SingleApplication::activateWindow() activationWindow not set or null
+2019-11-25 07:35:08.248 (0x7fff7261ba70) Debug: No outputs have backlight property
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Found output: "eDP-1"
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Output: "eDP-1" added
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Found output: "DP-1"
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Output is not connected
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Output is not connected
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Found output: "DP-2"
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Output is not connected
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:08.249 (0x7fff7261ba70) Debug: Output is not connected
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: No outputs have backlight property
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Found output: "eDP-1"
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Output: "eDP-1" added
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Found output: "DP-1"
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Output is not connected
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Output is not connected
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Found output: "DP-2"
+2019-11-25 07:35:12.276 (0x7ffdc0975540) Debug: Output is not connected
+2019-11-25 07:35:12.277 (0x7ffdc0975540) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:12.277 (0x7ffdc0975540) Debug: Output is not connected
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: No outputs have backlight property
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Found output: "eDP-1"
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Output: "eDP-1" added
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Found output: "DP-1"
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Output is not connected
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Output is not connected
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Found output: "DP-2"
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Output is not connected
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:14.191 (0x7ffe329f1f00) Debug: Output is not connected
+2019-11-25 07:35:15.593 (0x7ffcee9fa9b0) Debug: No outputs have backlight property
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Found output: "eDP-1"
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Output: "eDP-1" added
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Found output: "DP-1"
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Output is not connected
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Output is not connected
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Found output: "DP-2"
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Output is not connected
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:15.594 (0x7ffcee9fa9b0) Debug: Output is not connected
+2019-11-25 07:35:17.137 (0x7ffcee9fa9b0) Debug: void LXQt::SingleApplication::activateWindow() activationWindow not set or null
+2019-11-25 07:35:17.147 (0x7ffcb933ea50) Debug: No outputs have backlight property
+2019-11-25 07:35:17.147 (0x7ffcb933ea50) Debug: Found output: "eDP-1"
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Output: "eDP-1" added
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Found output: "DP-1"
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Output is not connected
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Found output: "HDMI-1"
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Output is not connected
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Found output: "DP-2"
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Output is not connected
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Found output: "HDMI-2"
+2019-11-25 07:35:17.148 (0x7ffcb933ea50) Debug: Output is not connected
+2019-11-25 07:36:46.146 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 94.8387 actionTime: QTime(Invalid)
+2019-11-25 07:38:46.143 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 94.0533 actionTime: QTime(Invalid)
+2019-11-25 07:40:46.060 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 93.2679 actionTime: QTime(Invalid)
+2019-11-25 07:42:25.360 (0x7ffc6d8258a0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 07:42:25.360 (0x7ffc00f8d150) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 07:42:25.364 (0x7ffc6d8258a0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 07:42:25.364 (0x7ffc00f8d150) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 07:42:46.064 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 92.5666 actionTime: QTime(Invalid)
+2019-11-25 07:44:46.110 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 91.9495 actionTime: QTime(Invalid)
+2019-11-25 07:46:46.143 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 91.4446 actionTime: QTime(Invalid)
+2019-11-25 07:48:36.063 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 90.9958 actionTime: QTime(Invalid)
+2019-11-25 07:48:36.566 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 90.9958 actionTime: QTime(Invalid)
+2019-11-25 07:49:10.715 (0x7ffc6d8258a0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:49:10.715 (0x7ffc00f8d150) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:49:10.719 (0x7ffc00f8d150) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:49:10.719 (0x7ffc6d8258a0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:50:40.037 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 92.5105 actionTime: QTime(Invalid)
+2019-11-25 07:52:01.563 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:52:26.479 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:52:40.043 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 93.9972 actionTime: QTime(Invalid)
+2019-11-25 07:53:04.196 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:54:40.042 (0x7ffc6d8258a0) Debug: BatteryChanged discharging: false chargeLevel: 94.979 actionTime: QTime(Invalid)
+2019-11-25 07:54:56.858 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/pcmanfm-qt.desktop"
+2019-11-25 07:54:59.060 (0x7ffc00f8d150) Debug: execAction "/usr/share/applications/pcmanfm-qt.desktop"
+2019-11-25 07:55:18.362 (0x7ffc00f8d150) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 38526, resource id: 33554435, major code: 18 (ChangeProperty), minor code: 0
+2019-11-25 07:55:33.025 (0x7ffdd8a88d80) Warning: Module lxqt-desktop.desktop won't terminate ... killing.
+2019-11-25 07:55:33.030 (0x7ffdd8a88d80) Warning: QProcess: Destroyed while process ("pcmanfm-qt") is still running.
+2019-11-25 07:55:39.921 (0x7ffc291d6920) Debug: systemd: "CanHibernate" = "challenge"
+2019-11-25 07:55:39.929 (0x7ffc291d6920) Debug: systemd: "CanSuspend" = "challenge"
+2019-11-25 07:55:39.934 (0x7ffec8f16e70) Debug: systemd: "CanReboot" = "challenge"
+2019-11-25 07:55:39.937 (0x7ffec8f16e70) Debug: systemd: "CanPowerOff" = "challenge"
+2019-11-25 07:55:40.093 (0x7fff34d52c70) Debug: New PolkitAgentListener  0x55b07a585880
+2019-11-25 07:55:40.093 (0x7fff34d52c70) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7fff34d52c80) for  0x55b07a585880
+2019-11-25 07:55:40.177 (0x7ffdf9c30b00) Debug: ()
+2019-11-25 07:55:40.254 (0x7ffdf9c30b00) Debug: WinIdChange 1000008 handle QWidgetWindow(0x55f0b56185a0, name="LXQtPanel panel1Window") QScreen(0x55f0b52c9e70, name="eDP-1")
+2019-11-25 07:55:40.267 (0x7ffdf9c30b00) Debug: Systray started
+2019-11-25 07:55:40.438 (0x7ffd64e25ad0) Debug: BatteryChanged discharging: false chargeLevel: 94.979 actionTime: QTime(Invalid)
+2019-11-25 07:55:40.444 (0x7ffd64e25ad0) Debug: Inhibit got: 29
+2019-11-25 07:55:40.444 (0x7ffd64e25ad0) Debug: Starting idlenesswatcher
+2019-11-25 07:55:45.874 (0x7ffdf9c30b00) Debug: execAction "/usr/share/applications/pcmanfm-qt.desktop"
+2019-11-25 07:55:50.973 (0x7ffec8f16e70) Debug: systemd: "CanReboot" = "challenge"
+2019-11-25 07:55:51.122 (0x7ffec8f16e70) Debug: systemd: "CanReboot" = "challenge"
+2019-11-25 07:55:51.127 (0x7ffec8f16e70) Warning: ** Dbus error **************************
+2019-11-25 07:55:51.127 (0x7ffec8f16e70) Warning: Error name  "org.freedesktop.DBus.Error.InteractiveAuthorizationRequired"
+2019-11-25 07:55:51.127 (0x7ffec8f16e70) Warning: Error msg   "Interactive authentication required."
+2019-11-25 07:55:51.127 (0x7ffec8f16e70) Warning: ****************************************
+2019-11-25 07:55:51.128 (0x7ffec8f16e70) Debug: systemd: "Reboot" = "Interactive authentication required."
+2019-11-25 07:55:51.129 (0x7ffec8f16e70) Warning: dbusCall: QDBusInterface is invalid "org.freedesktop.ConsoleKit" "/org/freedesktop/ConsoleKit/Manager" "org.freedesktop.ConsoleKit.Manager" "CanReboot"
+2019-11-25 07:57:57.022 (0x7ffdcb0ad0a0) Debug: New PolkitAgentListener  0x56417785a480
+2019-11-25 07:57:57.023 (0x7ffdcb0ad0a0) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7ffdcb0ad0b0) for  0x56417785a480
+2019-11-25 07:57:57.152 (0x7ffce4e77070) Debug: systemd: "CanHibernate" = "yes"
+2019-11-25 07:57:57.172 (0x7ffce4e77070) Debug: systemd: "CanSuspend" = "yes"
+2019-11-25 07:57:57.185 (0x7fff8ba166a0) Debug: systemd: "CanReboot" = "yes"
+2019-11-25 07:57:57.191 (0x7fff8ba166a0) Debug: systemd: "CanPowerOff" = "yes"
+2019-11-25 07:57:57.242 (0x7fffbd9c0a60) Debug: ()
+2019-11-25 07:57:57.503 (0x7fffbd9c0a60) Debug: WinIdChange e00008 handle QWidgetWindow(0x558624859480, name="LXQtPanel panel1Window") QScreen(0x55862450de70, name="eDP-1")
+2019-11-25 07:57:57.518 (0x7fffbd9c0a60) Debug: Systray started
+2019-11-25 07:57:57.687 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 96.0729 actionTime: QTime(Invalid)
+2019-11-25 07:57:57.693 (0x7ffe15c038c0) Debug: Inhibit got: 30
+2019-11-25 07:57:57.694 (0x7ffe15c038c0) Debug: Starting idlenesswatcher
+2019-11-25 07:58:00.568 (0x7fffbd9c0a60) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 07:58:12.483 (0x7fffbd9c0a60) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:58:12.483 (0x7ffe15c038c0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:58:12.487 (0x7ffe15c038c0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:58:12.487 (0x7fffbd9c0a60) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 07:59:58.097 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 96.7461 actionTime: QTime(Invalid)
+2019-11-25 08:01:58.152 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 97.4194 actionTime: QTime(Invalid)
+2019-11-25 08:03:58.151 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 98.0645 actionTime: QTime(Invalid)
+2019-11-25 08:05:58.070 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 98.3731 actionTime: QTime(Invalid)
+2019-11-25 08:07:58.179 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 98.6536 actionTime: QTime(Invalid)
+2019-11-25 08:09:58.150 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 98.9621 actionTime: QTime(Invalid)
+2019-11-25 08:11:58.085 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 99.2707 actionTime: QTime(Invalid)
+2019-11-25 08:13:58.082 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 99.5792 actionTime: QTime(Invalid)
+2019-11-25 08:14:48.308 (0x7fffbd9c0a60) Debug: Service "org.freedesktop.StatusNotifierItem-951-1" unregistered
+2019-11-25 08:14:55.426 (0x7fffbd9c0a60) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.UnknownProperty", "Property org.kde.StatusNotifierItem.IconThemePath was not found in object /StatusNotifierItem")
+2019-11-25 08:15:58.056 (0x7ffe15c038c0) Debug: BatteryChanged discharging: false chargeLevel: 99.7475 actionTime: QTime(Invalid)
+2019-11-25 08:21:18.458 (0x7fffbd9c0a60) Warning: QXcbConnection: XCB error: 3 (BadWindow), sequence: 11427, resource id: 10486025, major code: 18 (ChangeProperty), minor code: 0
+2019-11-25 08:21:26.465 (0x7fff8ba166a0) Debug: systemd: "CanReboot" = "yes"
+2019-11-25 08:21:26.596 (0x7fff8ba166a0) Debug: systemd: "CanReboot" = "yes"
+2019-11-25 08:22:16.894 (0x7fffc960c660) Debug: New PolkitAgentListener  0x5619a4c7f880
+2019-11-25 08:22:16.901 (0x7fffc960c660) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7fffc960c670) for  0x5619a4c7f880
+2019-11-25 08:22:17.119 (0x7ffcdc2eb410) Debug: systemd: "CanHibernate" = "yes"
+2019-11-25 08:22:17.153 (0x7ffcdc2eb410) Debug: systemd: "CanSuspend" = "yes"
+2019-11-25 08:22:17.164 (0x7fff97abf760) Debug: systemd: "CanReboot" = "yes"
+2019-11-25 08:22:17.169 (0x7fff97abf760) Debug: systemd: "CanPowerOff" = "yes"
+2019-11-25 08:22:17.447 (0x7ffeb0e0b750) Debug: ()
+2019-11-25 08:22:17.759 (0x7ffeb0e0b750) Debug: WinIdChange e00008 handle QWidgetWindow(0x56166a8da840, name="LXQtPanel panel1Window") QScreen(0x7fcb340047e0, name="eDP-1")
+2019-11-25 08:22:17.787 (0x7ffeb0e0b750) Debug: Systray started
+2019-11-25 08:22:17.886 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “ToolTip”")
+2019-11-25 08:22:17.889 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “OverlayIconName”")
+2019-11-25 08:22:17.891 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “OverlayIconPixmap”")
+2019-11-25 08:22:17.894 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “AttentionIconPixmap”")
+2019-11-25 08:22:17.974 (0x7fff24b73aa0) Debug: BatteryChanged discharging: false chargeLevel: 99.7475 actionTime: QTime(Invalid)
+2019-11-25 08:22:17.979 (0x7fff24b73aa0) Debug: Inhibit got: 31
+2019-11-25 08:22:17.980 (0x7fff24b73aa0) Debug: Starting idlenesswatcher
+2019-11-25 08:22:20.224 (0x7ffd53b0c490) Debug: Notification app "lxqt-panel" summary "Show Desktop: Global shortcut 'Control+Alt+D' cannot be registered" is already registered but this request is not an update. Broken app?
+2019-11-25 08:22:26.954 (0x7ffeb0e0b750) Debug: execAction "/usr/share/applications/qterminal.desktop"
+2019-11-25 08:22:29.414 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.414 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.419 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.419 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.421 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.421 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:22:29.422 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:22:29.422 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:22:29.425 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:22:29.425 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:22:29.426 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:22:29.426 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:26:10.005 (0x7fff24b73aa0) Debug: BatteryChanged discharging: false chargeLevel: 100 actionTime: QTime(Invalid)
+2019-11-25 08:26:10.006 (0x7fff24b73aa0) Debug: BatteryChanged discharging: false chargeLevel: 100 actionTime: QTime(Invalid)
+2019-11-25 08:28:40.727 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:28:40.727 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:28:40.731 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:28:40.731 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 08:28:43.682 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:28:43.682 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:28:43.686 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 08:28:43.686 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:31:13.241 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
+2019-11-25 09:31:13.242 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
+2019-11-25 09:31:13.244 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
+2019-11-25 09:32:53.927 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.927 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.931 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.931 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.933 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.933 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "bind"
+2019-11-25 09:32:53.934 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:32:53.934 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:32:53.937 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:32:53.938 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:32:53.939 (0x7ffeb0e0b750) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:32:53.939 (0x7fff24b73aa0) Warning: UdevQt: unhandled device action "unbind"
+2019-11-25 09:36:41.674 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “ToolTip”")
+2019-11-25 09:36:41.711 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “OverlayIconName”")
+2019-11-25 09:36:41.742 (0x7ffeb0e0b750) Debug: Error on DBus request: QDBusError("org.freedesktop.DBus.Error.InvalidArgs", "No such property “OverlayIconPixmap”")
+2019-11-25 09:36:43.264 (0x7ffeb0e0b750) Debug: Service ":1.62" unregistered
+2019-11-25 09:42:34.515 (0x7ffeb0e0b750) Debug: Service "org.freedesktop.StatusNotifierItem-10181-1" unregistered
+2019-11-25 09:42:59.642 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
+2019-11-25 09:42:59.644 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
+2019-11-25 09:42:59.646 (0x7ffeb0e0b750) Warning: QSvgHandler: Image filename is empty
