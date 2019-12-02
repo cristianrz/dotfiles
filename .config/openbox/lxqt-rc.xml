@@ -97,131 +97,378 @@
     <showDelay>300</showDelay>
     <moveButton>Middle</moveButton>
   </dock>
-  <keyboard>
-    <keybind key="A-Tab">
-      <action name="NextWindow">
-        <dialog>icons</dialog>
+    <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+    <!-- Keybindings for desktop switching -->
+    <keybind key="W-A-Left">
+      <action name="GoToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="GoToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="GoToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="GoToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Left">
+      <action name="SendToDesktop">
+        <to>left</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Right">
+      <action name="SendToDesktop">
+        <to>right</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Up">
+      <action name="SendToDesktop">
+        <to>up</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Down">
+      <action name="SendToDesktop">
+        <to>down</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-F1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-F2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-F3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-F4">
+      <action name="GoToDesktop">
+        <to>4</to>
       </action>
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <keybind key="W-l">
+    <!-- Keybindings for windows -->
+    <keybind key="S-W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-f">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="A-Escape">
+      <action name="Lower"/>
+      <action name="FocusToBottom"/>
+      <action name="Unfocus"/>
+    </keybind>
+    <keybind key="Print">
       <action name="Execute">
-        <command>slock</command>
+        <command>xfce4-screenshooter</command>
       </action>
     </keybind>
-    <keybind key="W-Return">
+    <keybind key="A-Print">
       <action name="Execute">
-        <command>qterminal -e tmux</command>
+        <command>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/ ; bl-image-viewer ~/Pictures/screenshots/$f'</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for window switching -->
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="C-A-Tab">
+      <action name="NextWindow">
+        <panels>yes</panels>
+        <desktop>yes</desktop>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <!-- Keybindings for running applications -->
+    <keybind key="A-F2">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Run Program</name>
+        </startupnotify>
+        <command>gmrun</command>
+      </action>
+    </keybind>
+    <keybind key="A-F3">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>dmenu-bind</name>
+        </startupnotify>
+        <command>~/.config/dmenu/dmenu-bind.sh</command>
       </action>
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>File Manager</name>
+        </startupnotify>
         <command>pcmanfm-qt</command>
       </action>
     </keybind>
-    <keybind key="S-W-exclam">
-      <action name="SendToDesktop">
-        <desktop>1</desktop>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="S-W-at">
-      <action name="SendToDesktop">
-        <desktop>2</desktop>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="S-W-numbersign">
-      <action name="SendToDesktop">
-        <desktop>3</desktop>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="S-W-dollar">
-      <action name="SendToDesktop">
-        <desktop>4</desktop>
-        <follow>no</follow>
-      </action>
-    </keybind>
-    <keybind key="W-f">
-      <action name="ToggleMaximizeFull"/>
-    </keybind>
-    <keybind key="S-W-q">
-      <action name="Close"/>
-    </keybind>
-    <keybind key="W-q">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
+    <keybind key="W-t">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Terminal</name>
+        </startupnotify>
+        <command>sakura -e tmux</command>
       </action>
     </keybind>
     <keybind key="W-w">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0%</y>
-        <width>50%</width>
-        <height>50%</height>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Web Browser</name>
+        </startupnotify>
+        <command>falkon</command>
       </action>
     </keybind>
-    <keybind key="W-a">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0%</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
+    <keybind key="W-l">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Lock screen</name>
+        </startupnotify>
+        <command>slock</command>
       </action>
     </keybind>
-    <keybind key="W-s">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>50%</y>
-        <width>50%</width>
-        <height>50%</height>
+    <keybind key="W-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Mediaplayer</name>
+        </startupnotify>
+        <command>mpv</command>
       </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>htop</name>
+        </startupnotify>
+        <command>qterminal -e htop</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Volume</name>
+        </startupnotify>
+        <command>pavucontrol-qt</command>
+      </action>
+    </keybind>
+<!--    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer set -D pulse Master toggle</command>
+      </action>
+    </keybind>
+-->
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>Logout</name>
+        </startupnotify>
+        <command>bl-exit</command>
+      </action>
+    </keybind>
+    <keybind key="W-Escape">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>false</enabled>
+          <name>xkill</name>
+        </startupnotify>
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for menus -->
+    <keybind key="W-Tab">
+      <action name="ShowMenu">
+        <menu>client-list-combined-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="W-space">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="A-C-q">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <!-- A bit of tiling -->
+    <keybind key="W-Right">
+      <action name="GrowToEdgeEast"/>
     </keybind>
     <keybind key="W-Left">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>50%</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>100%</height>
-      </action>
+      <action name="GrowToEdgeWest"/>
     </keybind>
     <keybind key="W-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>50%</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
+      <action name="GrowToEdgeSouth"/>
     </keybind>
     <keybind key="W-Up">
+      <action name="GrowToEdgeNorth"/>
+    </keybind>
+    <!-- Tiling left right-->
+    <!-- Vertical tiling active to left-->
+    <keybind key="C-A-Left">
       <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
+        <width>50%</width>
         <x>0</x>
         <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
       </action>
+      <!-- Vertical tiling next window to right-->
+      <action name="NextWindow">
+         <interactive>no</interactive>
+         <dialog>none</dialog>
+         <finalactions>
+           <action name="UnmaximizeFull"/>
+           <action name="MoveResizeTo">
+             <width>50%</width>
+           </action>
+           <action name="MaximizeVert"/>
+           <action name="MoveResizeTo">
+             <x>-0</x>
+             <y>0</y>
+            </action>
+         </finalactions>
+      </action>
+    </keybind>
+    <!-- Vertical tiling active to right-->
+    <keybind key="C-A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <x>-0</x>
+        <y>0</y>
+      </action>
+      <!-- Vertical tiling next window to left-->
+      <action name="NextWindow">
+         <interactive>no</interactive>
+         <dialog>none</dialog>
+         <finalactions>
+           <action name="UnmaximizeFull"/>
+           <action name="MoveResizeTo">
+             <width>50%</width>
+           </action>
+           <action name="MaximizeVert"/>
+           <action name="MoveResizeTo">
+             <x>0</x>
+             <y>0</y>
+            </action>
+         </finalactions>
+      </action>
+    </keybind>
+    <!-- Tiling Up/Down-->
+    <!-- Horizontal tiling active to bottom-->
+    <keybind key="C-A-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorz"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+        <x>0</x>
+        <y>-0</y>
+      </action>
+      <!-- Horizontal tiling next window to top-->
+      <action name="NextWindow">
+         <interactive>no</interactive>
+         <dialog>none</dialog>
+         <finalactions>
+           <action name="UnmaximizeFull"/>
+           <action name="MoveResizeTo">
+             <height>50%</height>
+           </action>
+           <action name="MaximizeHorz"/>
+           <action name="MoveResizeTo">
+             <x>0</x>
+             <y>0</y>
+            </action>
+         </finalactions>
+      </action>
+    </keybind>
+    <!-- Horizontal tiling active to top-->
+    <keybind key="C-A-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorz"/>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+        <x>0</x>
+        <y>0</y>
+      </action>
+      <!-- Horizontal tiling next window to bottom-->
+      <action name="NextWindow">
+         <interactive>no</interactive>
+         <dialog>none</dialog>
+         <finalactions>
+           <action name="UnmaximizeFull"/>
+           <action name="MoveResizeTo">
+             <height>50%</height>
+           </action>
+           <action name="MaximizeHorz"/>
+           <action name="MoveResizeTo">
+             <x>0</x>
+             <y>-0</y>
+            </action>
+         </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-r">
+      <action name="Resize"/>
+    </keybind>
+    <keybind key="A-m">
+      <action name="Move"/>
     </keybind>
   </keyboard>
   <mouse>
@@ -487,7 +734,7 @@
   <applications>
     <application class="*">
       <decor>no</decor>
-      <maximized>true</maximized>
+      <maximized>false</maximized>
     </application>
     <application name="oblogout">
       <position force="no">
