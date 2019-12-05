@@ -23,16 +23,10 @@ Return
 Send {Alt down}{F4}{Alt up}
 return
 
-; [Win + Enter] opens terminal
-LWin & Enter::
-Run, C:\Users\%A_UserName%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell.lnk, Max
-return
-
 ; [Win + f] puts window in full screen
 #f::
 Send {LWin down}{Up}{LWin up}
 return
-
 
 ; ----------
 ; Hotstrings
@@ -63,7 +57,6 @@ Send �
 return
 
 ; Moves windows with alt + drag
-
 Alt & LButton::
 CoordMode, Mouse  ; Switch to screen/absolute coordinates.
 MouseGetPos, EWD_MouseStartX, EWD_MouseStartY, EWD_MouseWin
@@ -268,3 +261,39 @@ LWin & 9::switchDesktopByNumber(9)
 ;^!a::switchDesktopByNumber(CurrentDesktop - 1)
 ;^!c::createVirtualDesktop()
 ;^!d::deleteVirtualDesktop()
+
+#InstallKeybdHook
+#Persistent
+#HotkeyInterval,100
+#NoEnv
+SetKeyDelay, –1
+SetTitleMatchMode, 2 ; Makes matching the titles easier
+SendMode Input
+SetWorkingDir %A_ScriptDir%
+
+XButton1::
+{
+	; put the hiding windows stuff here
+	WinMinimize, Firefox
+	WinMinimize, MSYS2
+	WinMinimize, PowerShell
+	WinMinimize, Notepad
+	WinActivate, Outlook
+	WinActivate, Word
+	WinActivate, VERSION
+	Return
+}
+
+
+XButton2::
+{
+	; put the hiding windows stuff here
+	WinMinimize, Firefox
+	WinMinimize, MSYS2
+	WinMinimize, PowerShell
+	WinMinimize, Notepad
+	WinActivate, Outlook
+	WinActivate, Word
+	WinActivate, VERSION
+	Return
+}
