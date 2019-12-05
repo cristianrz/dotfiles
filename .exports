@@ -1,12 +1,13 @@
 #!/bin/env sh
 
 export PATH="${PATH}:$HOME/.local/bin/"
+
 if test -d /h/bin; then
   export PATH="${PATH}:/h/bin/"
 fi
 
 case "$0" in
-  *bash)
+  *bash*)
     export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\[\033[00m\] '
     # Infinite history.
     HISTSIZE='' HISTFILESIZE=
@@ -16,8 +17,7 @@ case "$0" in
     PS1="$(tput sgr0)"
     ;;
 esac
+
 export TERM="screen-256color"
 
-# Stops git from prompting a graphical login
-unset SSH_ASKPASS
 
