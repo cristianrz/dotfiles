@@ -1,12 +1,12 @@
-#!/bin/bash
-function ls() {
-  command ls "$@" -a --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
+#!/bin/env sh
+ls() {
+  command ls "$@" -A --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
     --group-directories-first
 }
 
 # Modifies cd to do an ls everytime you access a directory
-function cd() {
-  builtin cd "$@" || exit
+cd() {
+  builtin cd "$@" || return
   pwd
   echo ""
   ls .
@@ -14,16 +14,16 @@ function cd() {
 }
 
 # Find by name and is case insensitive
-function search() {
+search() {
   find . -iname "*$1*"
 }
 
 # Shows packages installed ordered by size
-function packagesizes() {
+packagesizes() {
   dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
 }
 
-function extract() {
+extract() {
   case "$1" in
   *.tar.bz2) tar xjf "$1" ;;
   *.tar.gz) tar xzf "$1" ;;
@@ -41,15 +41,15 @@ function extract() {
   esac
 }
 
-function start() {
-  "$@" &>/dev/null &
+start() {
+  "$@" >/dev/null 2>&1 &
 }
 
-function restart() {
+restart() {
   pkill "$@" && start "$@"
 }
 
-function wtch() {
+wtch() {
   while true; do
     display="$(date)\\n\\n$("$@")"
     clear
@@ -59,11 +59,11 @@ function wtch() {
 }
 
 # Checks the process associated with a window
-function xid() {
+xid() {
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps "$(cat)"
 }
 
-function phone(){
+phone(){
   mkdir -p /home/"$(whoami)"/phone_ftp/
   sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
 }
