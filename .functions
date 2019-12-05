@@ -1,16 +1,11 @@
 #!/bin/env sh
-ls() {
-  command ls "$@" -A --ignore="*ntuser*" --ignore="NTUSER*" --color=auto \
-    --group-directories-first
-}
 
 # Modifies cd to do an ls everytime you access a directory
 cd() {
   builtin cd "$@" || return
-  pwd
-  echo ""
   ls .
   echo ""
+  pwd
 }
 
 # Find by name and is case insensitive
@@ -63,11 +58,11 @@ xid() {
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps "$(cat)"
 }
 
-phone(){
+phone() {
   mkdir -p /home/"$(whoami)"/phone_ftp/
   sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
 }
 
-crun(){
+crun() {
   gcc -std=c99 -Wall -lm "$1" -o /tmp/result && /tmp/result || echo "Failed."
 }
