@@ -6,7 +6,7 @@ function ls() {
 
 # Modifies cd to do an ls everytime you access a directory
 function cd() {
-  builtin cd "$@"
+  /bin/cd "$@" || exit
   pwd
   echo ""
   ls .
