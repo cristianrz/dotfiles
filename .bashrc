@@ -43,21 +43,17 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #  fi
 #fi
 
+# Stops git from prompting a graphical login
+unset SSH_ASKPASS
+
 # Source global definitions
 # shellcheck disable=SC1091
 [ -f /etc/bashrc ] && . /etc/bashrc
 
-# shellcheck disable=SC1090
-[ -f "$HOME/.env" ] && . "$HOME/.env"
-
-# shellcheck disable=SC1090
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
-# shellcheck disable=SC1090
-[ -f "$HOME/.functions" ] && . "$HOME/.functions"
-
-# shellcheck disable=SC1090
-[ -f "$HOME/.local-env" ] && . "$HOME/.local-env"
+for file in .exports .aliases .functions .local-env; do
+  # shellcheck disable=SC1090
+  [ -f ~/$file ] && . ~/$file
+done
 
 if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
   tmux attach -t default || tmux new -s default
