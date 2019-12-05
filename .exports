@@ -2,8 +2,8 @@
 
 export PATH="${PATH}:$HOME/.local/bin/"
 
-if test -d /h/bin; then
-  export PATH="${PATH}:/h/bin/"
+if test -d /h/.local/bin; then
+  export PATH="${PATH}:/h/.local/bin/"
 fi
 
 case "$0" in
