@@ -31,4 +31,8 @@ alias mv="mv -v"
 alias cp="cp -v"
 alias mkdir="mkdir -v"
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+if test -f /usr/bin/git; then
+  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+elif test -f /cmd/git; then
+  alias dotfiles='/cmd/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+fi
