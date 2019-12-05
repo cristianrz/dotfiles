@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env sh
 alias ls="ls -a"
 
 # I prefer lrt rather than the usual ll
