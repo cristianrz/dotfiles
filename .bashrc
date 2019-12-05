@@ -3,8 +3,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -23,7 +23,7 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -57,10 +57,9 @@ fi
 # shellcheck disable=SC1090
 [[ -f "$HOME/.local-env" ]] && . "$HOME/.local-env"
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default
 fi
 
 # Uses the previously defined cd function when you open a terminal
 cd . || exit
-
