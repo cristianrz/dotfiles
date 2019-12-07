@@ -15,7 +15,7 @@ search() {
 
 # Shows packages installed ordered by size
 packagesizes() {
-  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
+  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib
 }
 
 extract() {
