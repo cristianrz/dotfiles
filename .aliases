@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias ls='/bin/ls -A --ignore="*ntuser*" --ignore="*NTUSER*" --color=auto --group-directories-first'
+alias ls='/bin/ls  --ignore="*ntuser*" --ignore="*NTUSER*" --color=auto --group-directories-first'
 
 # I prefer lrt rather than the usual ll
 alias ll="ls -lrt"

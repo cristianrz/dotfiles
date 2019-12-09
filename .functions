@@ -15,7 +15,7 @@ search() {
 
 # Shows packages installed ordered by size
 packagesizes() {
-  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
+  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib | tail -n 10
 }
 
 extract() {
@@ -65,4 +65,8 @@ phone() {
 
 crun() {
   gcc -std=c99 -Wall -lm "$1" -o /tmp/result && /tmp/result || echo "Failed."
+}
+
+openlink(){
+  xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
