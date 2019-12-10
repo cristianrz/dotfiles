@@ -6,6 +6,11 @@
 Run, C:\Users\%A_UserName%\, Max
 return
 
+; [Ctrl + t] opens terminal
+#t::
+Run, "C:\tools\Cmder\Cmder.exe"
+return
+
 ; [Ctrl + h] toggles hidden files
 ^h::
 MsgBox, Hidden Files Toggle Successful
