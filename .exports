@@ -20,4 +20,6 @@ esac
 
 export TERM="screen-256color"
 
-
+if test -d ~/go; then
+  export GOPATH="~/go"
+fi
