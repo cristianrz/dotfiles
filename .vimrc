@@ -76,3 +76,5 @@ set undodir=.vim/,~/.vim/backups/,/tmp/
 
 syntax on
 colorscheme onedark
+
+au VimEnter * NERDTree
