@@ -1,7 +1,3 @@
-; Includes
-; =======
-#Include desktop-switch.ahk
-#Include window-move.ahk
 
 ; Hotkeys
 ; =======
