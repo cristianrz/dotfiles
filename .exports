@@ -8,7 +8,7 @@ fi
 
 case "$0" in
   *bash*)
-    export PS1='\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\$\[\033[00m\] '
+    export PS1="\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[31m\]►\[\e[m\] "
     # Infinite history.
     HISTSIZE='' HISTFILESIZE=
     ;;
@@ -22,4 +22,8 @@ export TERM="screen-256color"
 
 if test -d ~/go; then
   export GOPATH="$HOME/go"
+fi
+
+if test -d $HOME/go/bin; then
+  export PATH="${PATH}:$HOME/go/bin"
 fi
