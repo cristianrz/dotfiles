@@ -36,3 +36,4 @@ if test -f /usr/bin/git; then
 elif test -f /cmd/git; then
   alias dotfiles='/cmd/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 fi
+alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
