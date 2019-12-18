@@ -10,12 +10,17 @@ cd() {
 
 # Find by name and is case insensitive
 search() {
-  find . -iname "*$1*"
+  find . -iname "*$1*" 2>/dev/null
 }
 
 # Shows packages installed ordered by size
 packagesizes() {
-  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib | tail -n 10
+  if test -n "$1"; then
+    n="$1"
+  else
+    n=10
+  fi
+  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib | tail -n "$n"
 }
 
 extract() {
@@ -44,15 +49,6 @@ restart() {
   pkill "$@" && start "$@"
 }
 
-wtch() {
-  while true; do
-    display="$(date)\\n\\n$("$@")"
-    clear
-    printf "%s" "$display"
-    sleep 1s
-  done
-}
-
 # Checks the process associated with a window
 xid() {
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps "$(cat)"
@@ -63,10 +59,26 @@ phone() {
   sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
 }
 
-crun() {
-  gcc -std=c99 -Wall -lm "$1" -o /tmp/result && /tmp/result || echo "Failed."
+openlink() {
+  xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
 
-openlink(){
-  xdg-open "$(cat "$1")" >/dev/null 2>&1 &
+apt_added() {
+  sudo apt list --installed | sed 's/\/.*$//g' >/tmp/installed
+  diff -u "$1" /tmp/installed | grep -E "^\\+" | sed 's/+//g'
+}
+
+apt_remove() {
+  sudo apt list --installed | sed 's/\/.*$//g' >/tmp/installed
+  diff -u /tmp/installed "$1" | grep -E "^\\+" | sed 's/+//g'
+}
+
+gofmtall() {
+  # shellcheck disable=SC2046
+  gofmt -w $(find . -name "*.go")
+}
+
+pid() {
+  # shellcheck disable=SC2009
+  ps -ef | grep -E "PID|$1" | grep -v 'grep'
 }
