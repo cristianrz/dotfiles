@@ -28,4 +28,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
-export PATH="/home/cariza/.guix-profile/bin${PATH:+:}$PATH"
+GUIX_PROFILE="/home/cariza/.guix-profile"
+. "$GUIX_PROFILE/etc/profile"
