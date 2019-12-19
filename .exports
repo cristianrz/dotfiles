@@ -8,6 +8,9 @@ if test -d "$HOME"/go/bin; then
   export PATH="$HOME/go/bin:${PATH}"
 fi
 
+export PATH="$HOME/sh/bin:${PATH}"
+export SHPATH="$HOME/sh"
+
 case "$0" in
 *bash*)
   # shellcheck disable=SC1117
