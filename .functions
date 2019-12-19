@@ -45,32 +45,18 @@ start() {
   "$@" >/dev/null 2>&1 &
 }
 
-restart() {
-  pkill "$@" && start "$@"
-}
-
 # Checks the process associated with a window
 xid() {
   xprop _NET_WM_PID | sed 's/_NET_WM_PID(CARDINAL) = //' | ps "$(cat)"
 }
 
-phone() {
+androidftp() {
   mkdir -p /home/"$(whoami)"/phone_ftp/
   sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
 }
 
 openlink() {
   xdg-open "$(cat "$1")" >/dev/null 2>&1 &
-}
-
-apt_added() {
-  sudo apt list --installed | sed 's/\/.*$//g' >/tmp/installed
-  diff -u "$1" /tmp/installed | grep -E "^\\+" | sed 's/+//g'
-}
-
-apt_remove() {
-  sudo apt list --installed | sed 's/\/.*$//g' >/tmp/installed
-  diff -u /tmp/installed "$1" | grep -E "^\\+" | sed 's/+//g'
 }
 
 gofmtall() {
