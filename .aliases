@@ -1,6 +1,7 @@
 #!/bin/sh
 
-alias ls='/bin/ls -h --ignore="*ntuser*" --ignore="*NTUSER*" --color=auto --group-directories-first'
+alias ls='/bin/ls -h --color=auto --group-directories-first'
+alias lsa='/bin/ls -hA --color=auto --group-directories-first'
 
 # I prefer lrt rather than the usual ll
 alias ll="ls -lrt"
@@ -36,4 +37,5 @@ if test -f /usr/bin/git; then
 elif test -f /cmd/git; then
   alias dotfiles='/cmd/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 fi
+
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
