@@ -42,6 +42,6 @@ for file in .exports .aliases .functions .local-env; do
   [ -f ~/$file ] && . ~/$file
 done
 
-if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default
-fi
+#if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+#  tmux attach -t default || tmux new -s default
+#fi
