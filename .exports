@@ -6,6 +6,7 @@ fi
 
 if test -d "$HOME"/go/bin; then
   export PATH="$HOME/go/bin:${PATH}"
+  export GOBIN="$HOME/go/bin"
 fi
 
 export PATH="$HOME/sh/bin:${PATH}"
@@ -14,7 +15,8 @@ export SHPATH="$HOME/sh"
 case "$0" in
 *bash*)
   # shellcheck disable=SC1117
-  export PS1="\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[31m\]►\[\e[m\] "
+  # get current branch in git repo
+  export PS1='\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[32m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\e[m\] \[\e[31m\]►\[\e[m\] '
   # Infinite history.
   HISTSIZE='' HISTFILESIZE=
   ;;
