@@ -1,7 +1,7 @@
 #!/bin/sh
 
-alias ls='/bin/ls -h --color=auto --group-directories-first'
-alias lsa='/bin/ls -hA --color=auto --group-directories-first'
+alias ls='/bin/env ls -h --color=auto --group-directories-first'
+alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
 
 # I prefer lrt rather than the usual ll
 alias ll="ls -lrt"
@@ -39,3 +39,10 @@ elif test -f /cmd/git; then
 fi
 
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
+
+alias heimdall='sudo /usr/sbin/chroot /alpine /bin/sh -l'
+
+# Checks the process associated with a window
+alias xid='xprop _NET_WM_PID | sed "/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
+
+alias gofmtall='gofmt -w $(find . -name "*.go")'
