@@ -5,7 +5,6 @@ cd() {
   builtin cd "$@" || return
   ls .
   echo ""
-  pwd
 }
 
 # Find by name and is case insensitive
