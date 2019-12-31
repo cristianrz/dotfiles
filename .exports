@@ -9,17 +9,20 @@ if test -d "$HOME"/go/bin; then
   export GOBIN="$HOME/go/bin"
 fi
 
-export PATH="$HOME/sh/bin:${PATH}"
-export SHPATH="$HOME/sh"
-
 case "$0" in
 *bash*)
-  # shellcheck disable=SC1117
   # get current branch in git repo
-  export PS1='\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[32m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\e[m\] \[\e[31m\]►\[\e[m\] '
+  # shellcheck disable=SC1117
+  # shellcheck disable=SC2063
+  PS1="\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[32m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\e[m\] \[\e[31m\]►\[\e[m\] "
+  export PS1
   # Infinite history.
   HISTSIZE='' HISTFILESIZE=
   ;;
+*'mksh')
+  export PS1="${USER}:\${PWD} \$ "
+  ;;
+
 *)
   export PS1
   PS1="$(tput sgr0)"
