@@ -1,57 +1,18 @@
 #!/bin/env sh
 
 # Modifies cd to do an ls everytime you access a directory
-cd() {
-  builtin cd "$@" || return
-  ls .
-  echo ""
-  pwd
-}
+cd() { builtin cd "$@" && ls && echo ""; }
 
 # Find by name and is case insensitive
-search() {
-  find . -iname "*$1*" 2>/dev/null
-}
-
-# Shows packages installed ordered by size
-packagesizes() {
-  if test -n "$1"; then
-    n="$1"
-  else
-    n=10
-  fi
-  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib | tail -n "$n"
-}
-
-extract() {
-  case "$1" in
-  *.tbz2 | *.tar.bz2) tar fjvx "$1" ;;
-  *.tar | *.tar.xz) tar fvx "$1" ;;
-  *.tgz | *.tar.gz) tar fvxz "$1" ;;
-  *.7z) 7za x "$1" ;;
-  *.Z) uncompress "$1" ;;
-  *.bz2) bunzip2 "$1" ;;
-  *.gz) gunzip "$1" ;;
-  *.rar) unrar e "$1" ;;
-  *.zip) unzip "$1" ;;
-  *) echo "'$1' cannot be extracted" ;;
-  esac
-}
+search() { find . -iname "*$1*" 2>/dev/null; }
 
 start() {
-  "$@" >/dev/null 2>&1 &
-}
-
-androidftp() {
-  mkdir -p /home/"$(whoami)"/phone_ftp/
-  sshfs "${1}":/storage/emulated/0 /home/"$(whoami)"/phone_ftp/ -p 1234
+  nohup "$@" >/dev/null 2>&1 &
 }
 
 openlink() {
-  xdg-open "$(cat "$1")" >/dev/null 2>&1 &
+  nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
 
-pid() {
-  # shellcheck disable=SC2009
-  ps -ef | grep -E "PID|$1" | grep -v 'grep'
-}
+# shellcheck disable=SC2009
+pid() { ps -ef | grep -E "PID|$1" | grep -v 'grep'; }
