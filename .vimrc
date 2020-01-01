@@ -1,18 +1,18 @@
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
-if v:progname =~? "evim"
-  finish
-endif
+"if v:progname =~? "evim"
+"  finish
+"endif
 
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
 if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
+  set nobackup    " do not keep a backup file, use versions instead
 else
-  set backup		" keep a backup file (restore to previous version)
+  set backup    " keep a backup file (restore to previous version)
   if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
+    set undofile  " keep an undo file (undo changes after closing)
   endif
 endif
 
@@ -41,7 +41,6 @@ endif
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-
 " Declare the list of plugins.
 Plug 'mattn/emmet-vim'
 Plug 'chiel92/vim-autoformat'
@@ -64,11 +63,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" set t_te=[H[2J
-let g:NERDTreeWinSize=20
+let g:NERDTreeWinSize=25
 
 set backupdir=.vim/,~/.vim/backups/,/tmp/
 set directory=.vim/,~/.vim/backups/,/tmp/
@@ -80,6 +75,7 @@ set t_ut=
 colorscheme codedark
 set splitbelow
 set termwinsize=8x0
+let NERDTreeShowHidden=1
 
 au VimEnter * NERDTree
 au VimEnter * wincmd p
