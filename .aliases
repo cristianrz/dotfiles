@@ -45,4 +45,4 @@ alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
 
 alias gofmtall='gofmt -w $(find . -name "*.go")'
 
-alias vi="vim"
+alias vi="nvi"
