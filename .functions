@@ -7,12 +7,14 @@ cd() { builtin cd "$@" && ls && echo ""; }
 search() { find . -iname "*$1*" 2>/dev/null; }
 
 start() {
-  nohup "$@" >/dev/null 2>&1 &
+ nohup "$@" >/dev/null 2>&1 &
 }
 
 openlink() {
-  nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
+ nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
 
 # shellcheck disable=SC2009
 pid() { ps -ef | grep -E "PID|$1" | grep -v 'grep'; }
+
+own(){ sudo chown -R "$(whoami)":"$(whoami)" "$@"; }
