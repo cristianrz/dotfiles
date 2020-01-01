@@ -46,10 +46,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
-Plug 'pangloss/vim-javascript'
-Plug 'briancollins/vim-jst'
-Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'ajh17/VimCompletesMe'
+Plug 'tomasiser/vim-code-dark'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -69,12 +68,21 @@ noremap <Right> <Nop>
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " set t_te=[H[2J
+let g:NERDTreeWinSize=20
 
 set backupdir=.vim/,~/.vim/backups/,/tmp/
 set directory=.vim/,~/.vim/backups/,/tmp/
 set undodir=.vim/,~/.vim/backups/,/tmp/
 
 syntax on
-colorscheme onedark
+set t_Co=256
+set t_ut=
+colorscheme codedark
 
 au VimEnter * NERDTree
+au VimEnter * wincmd p
+set splitbelow
+au VimEnter * term
+set termwinsize=8x0
+au VimEnter * wincmd p
+
