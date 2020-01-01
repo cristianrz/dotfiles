@@ -1,48 +1,21 @@
 #!/bin/sh
+#
+# Aliases
 
+alias :q="exit"
+alias br="vimv;ls -1"
+alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
+alias cp="cp -v"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gofmtall='gofmt -w $(find . -name "*.go")'
+alias grep="grep --color=auto"
+alias his="history 1000 | grep"
+alias ll="ls -lrt"
 alias ls='/bin/env ls -h --color=auto --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
-
-# I prefer lrt rather than the usual ll
-alias ll="ls -lrt"
-
-# Alias xdg-open to open
-alias open="xdg-open"
-
-# Downloads from youtube in mp3 directly
-alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
-
-# This function searches through the history
-alias his="history 1000 | grep"
-
-# br edits file names in vim
-alias br="vimv;ls -1"
-
-# grep with colours
-alias grep="grep --color=auto"
-
-# Give priority to less over more
-alias more="less"
-
-# Exit terminal like in vim
-alias :q="exit"
-
-# Add more verbose to move copy and create directories
-alias mv="mv -v"
-alias cp="cp -v"
 alias mkdir="mkdir -v"
-
-if test -f /usr/bin/git; then
-  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-elif test -f /cmd/git; then
-  alias dotfiles='/cmd/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-fi
-
-alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
-
-# Checks the process associated with a window
+alias mv="mv -v"
+alias open="xdg-open"
+alias vi="nvi"
 alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
 
-alias gofmtall='gofmt -w $(find . -name "*.go")'
-
-alias vi="nvi"
