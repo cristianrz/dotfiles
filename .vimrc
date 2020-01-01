@@ -78,11 +78,9 @@ syntax on
 set t_Co=256
 set t_ut=
 colorscheme codedark
+set splitbelow
+set termwinsize=8x0
 
 au VimEnter * NERDTree
-au VimEnter * wincmd p
-set splitbelow
-au VimEnter * term
-set termwinsize=8x0
 au VimEnter * wincmd p
 
