@@ -1,27 +1,9 @@
 #!/bin/env bash
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+# executed by the command interpreter for login shells.
 
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# shellcheck disable=SC1090
+test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+test -d "$HOME/.local/bin" && PATH="$HOME/.local/bin:$PATH"
+export PATH
 
-case "$0" in
-'-bash')
-    # shellcheck disable=SC1090
-    test -f "$HOME/.bashrc" && . "$HOME/.bashrc"
-    ;;
-esac
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+test "$0" == '-bash' && test -f "$HOME/.bashrc" && . "$HOME/.bashrc"
