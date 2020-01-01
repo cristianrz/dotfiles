@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Programs that will run after Openbox has started
+
+pcmanfm --desktop &
+xfce4-panel &
+compton -b -c &
