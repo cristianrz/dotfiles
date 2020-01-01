@@ -1,20 +1,27 @@
 #!/bin/env sh
+#
+# Functions
 
-# Modifies cd to do an ls everytime you access a directory
+# ls and print a new line after cd
 cd() { builtin cd "$@" && ls && echo ""; }
 
-# Find by name and is case insensitive
-search() { find . -iname "*$1*" 2>/dev/null; }
-
-start() {
- nohup "$@" >/dev/null 2>&1 &
-}
-
+# opens a link inside a text file
 openlink() {
- nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
+  nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
 
-# shellcheck disable=SC2009
+# Chowns a folder to yourself
+own(){ sudo chown -R "$(whoami)":"$(whoami)" "$@"; }
+
+# Similar to what ps aux | grep would do
 pid() { ps -ef | grep -E "PID|$1" | grep -v 'grep'; }
 
-own(){ sudo chown -R "$(whoami)":"$(whoami)" "$@"; }
+# Finds a file/dir case-insensitive
+search() { find . -iname "*$1*" 2>/dev/null; }
+
+# starts a command in the background
+start() {
+  nohup "$@" >/dev/null 2>&1 &
+}
+
+
