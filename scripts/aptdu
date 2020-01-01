@@ -6,4 +6,4 @@ else
     n=10
 fi
 
-dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | grep -v lib | tail -n "$n"
+dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n "$n"
