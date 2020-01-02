@@ -5,3 +5,4 @@
 pcmanfm --desktop &
 xfce4-panel &
 compton -b -c &
+redshift -l 50:1 &
