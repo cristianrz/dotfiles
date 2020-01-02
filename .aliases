@@ -9,7 +9,7 @@ alias cp="cp -v"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gofmtall='gofmt -w $(find . -name "*.go")'
 alias grep="grep --color=auto"
-alias his="history 1000 | grep"
+alias his="history 1 | grep"
 alias ll="ls -lrt"
 alias ls='/bin/env ls -h --color=auto --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
@@ -17,5 +17,5 @@ alias mkdir="mkdir -v"
 alias mv="mv -v"
 alias open="xdg-open"
 alias please='sudo $(fc -ln -1)'
-alias vi="nvi"
 alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
+test -f /bin/nvi && alias vi="nvi"
