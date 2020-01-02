@@ -9,7 +9,7 @@ alias cp="cp -v"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gofmtall='gofmt -w $(find . -name "*.go")'
 alias grep="grep --color=auto"
-alias his="history 1000 | grep"
+alias his="history 1 | grep"
 alias ll="ls -lrt"
 alias ls='/bin/env ls -h --color=auto --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
