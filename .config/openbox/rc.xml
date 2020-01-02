@@ -174,197 +174,197 @@
         <!-- 'Left', 'Middle', 'Right' -->
     </dock>
     <keyboard>
-      <chainQuitKey>C-g</chainQuitKey>
-      <keybind key="S-A-Left">
-        <action name="SendToDesktop">
-          <desktop>1</desktop>
-        </action>
-      </keybind>
-      <keybind key="S-A-Right">
-        <action name="SendToDesktop">
-          <desktop>1</desktop>
-        </action>
-      </keybind>
-      <keybind key="S-A-Up">
-        <action name="SendToDesktop">
-          <desktop>1</desktop>
-        </action>
-      </keybind>
-      <keybind key="S-A-Down">
-        <action name="SendToDesktop">
-          <desktop>1</desktop>
-        </action>
-      </keybind>
-      <keybind key="W-1">
-        <action name="GoToDesktop">
-          <to>1</to>
-        </action>
-      </keybind>
-      <keybind key="W-2">
-        <action name="GoToDesktop">
-          <to>2</to>
-        </action>
-      </keybind>
-      <keybind key="W-3">
-        <action name="GoToDesktop">
-          <to>3</to>
-        </action>
-      </keybind>
-      <keybind key="W-4">
-        <action name="GoToDesktop">
-          <to>4</to>
-        </action>
-      </keybind>
-      <keybind key="W-d">
-        <action name="ToggleShowDesktop"/>
-      </keybind>
-      <keybind key="S-W-q">
-        <action name="Close"/>
-      </keybind>
-      <keybind key="A-Print">
-        <action name="Execute">
-          <command>scrot -s</command>
-        </action>
-      </keybind>
-      <keybind key="A-Tab">
-        <action name="NextWindow"/>
-      </keybind>
-      <keybind key="A-S-Tab">
-        <action name="PreviousWindow"/>
-      </keybind>
-      <keybind key="W-S-Right">
-        <action name="DirectionalCycleWindows"/>
-      </keybind>
-      <keybind key="W-S-Left">
-        <action name="DirectionalCycleWindows"/>
-      </keybind>
-      <keybind key="W-S-Up">
-        <action name="DirectionalCycleWindows"/>
-      </keybind>
-      <keybind key="W-S-Down">
-        <action name="DirectionalCycleWindows"/>
-      </keybind>
-      <keybind key="W-e">
-        <action name="Execute">
-          <command>pcmanfm</command>
-        </action>
-      </keybind>
-      <keybind key="Print">
-        <action name="Execute">
-          <command>scrot</command>
-        </action>
-      </keybind>
-      <keybind key="W-p">
-        <action name="Execute">
-          <command>lxrandr</command>
-        </action>
-      </keybind>
-      <keybind key="A-2">
-        <action name="Execute">
-          <command>dmenu_run</command>
-        </action>
-      </keybind>
-      <keybind key="W-t">
-        <action name="Execute">
-          <command>xfce4-terminal</command>
-        </action>
-      </keybind>
-      <keybind key="W-f">
-        <action name="ToggleMaximizeFull"/>
-      </keybind>
-      <keybind key="W-Left">
-        <action name="UnmaximizeFull"/>
-        <action name="MaximizeVert"/>
-        <action name="MoveResizeTo">
-          <x>0</x>
-          <y>0</y>
-          <width>50%</width>
-        </action>
-        <action name="NextWindow">
-          <dialog>none</dialog>
-          <finalactions>
-            <action name="UnmaximizeFull"/>
-            <action name="MoveResizeTo">
-              <width>50%</width>
-            </action>
-            <action name="MaximizeVert"/>
-            <action name="MoveResizeTo">
-              <x>-0</x>
-              <y>0</y>
-            </action>
-          </finalactions>
-        </action>
-      </keybind>
-      <keybind key="W-Right">
-        <action name="UnmaximizeFull"/>
-        <action name="MaximizeVert"/>
-        <action name="MoveResizeTo">
-          <x>-0</x>
-          <y>0</y>
-          <width>50%</width>
-        </action>
-        <action name="NextWindow">
-          <dialog>none</dialog>
-          <finalactions>
-            <action name="UnmaximizeFull"/>
-            <action name="MoveResizeTo">
-              <width>50%</width>
-            </action>
-            <action name="MaximizeVert"/>
-            <action name="MoveResizeTo">
-              <x>0</x>
-              <y>0</y>
-            </action>
-          </finalactions>
-        </action>
-      </keybind>
-      <keybind key="W-Down">
-        <action name="UnmaximizeFull"/>
-        <action name="MaximizeHorz"/>
-        <action name="MoveResizeTo">
-          <x>0</x>
-          <y>-0</y>
-          <height>50%</height>
-        </action>
-        <action name="NextWindow">
-          <dialog>none</dialog>
-          <finalactions>
-            <action name="UnmaximizeFull"/>
-            <action name="MoveResizeTo">
-              <height>50%</height>
-            </action>
-            <action name="MaximizeHorz"/>
-            <action name="MoveResizeTo">
-              <x>0</x>
-              <y>0</y>
-            </action>
-          </finalactions>
-        </action>
-      </keybind>
-      <keybind key="W-Up">
-        <action name="UnmaximizeFull"/>
-        <action name="MaximizeHorz"/>
-        <action name="MoveResizeTo">
-          <x>0</x>
-          <y>0</y>
-          <height>50%</height>
-        </action>
-        <action name="NextWindow">
-          <dialog>none</dialog>
-          <finalactions>
-            <action name="UnmaximizeFull"/>
-            <action name="MoveResizeTo">
-              <height>50%</height>
-            </action>
-            <action name="MaximizeHorz"/>
-            <action name="MoveResizeTo">
-              <x>0</x>
-              <y>-0</y>
-            </action>
-          </finalactions>
-        </action>
-      </keybind>
-    </keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="S-A-Left">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-A-Right">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-A-Up">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="S-A-Down">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="S-W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-Print">
+      <action name="Execute">
+        <command>scrot -s</command>
+      </action>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow"/>
+    </keybind>
+    <keybind key="W-S-Right">
+      <action name="DirectionalCycleWindows"/>
+    </keybind>
+    <keybind key="W-S-Left">
+      <action name="DirectionalCycleWindows"/>
+    </keybind>
+    <keybind key="W-S-Up">
+      <action name="DirectionalCycleWindows"/>
+    </keybind>
+    <keybind key="W-S-Down">
+      <action name="DirectionalCycleWindows"/>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>scrot</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>lxrandr</command>
+      </action>
+    </keybind>
+    <keybind key="A-2">
+      <action name="Execute">
+        <command>dmenu_run</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="ToggleMaximizeFull"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+      </action>
+      <action name="NextWindow">
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <width>50%</width>
+          </action>
+          <action name="MaximizeVert"/>
+          <action name="MoveResizeTo">
+            <x>-0</x>
+            <y>0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+      </action>
+      <action name="NextWindow">
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <width>50%</width>
+          </action>
+          <action name="MaximizeVert"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorz"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <height>50%</height>
+      </action>
+      <action name="NextWindow">
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <height>50%</height>
+          </action>
+          <action name="MaximizeHorz"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeHorz"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <height>50%</height>
+      </action>
+      <action name="NextWindow">
+        <dialog>none</dialog>
+        <finalactions>
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <height>50%</height>
+          </action>
+          <action name="MaximizeHorz"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>-0</y>
+          </action>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>/home/cariza/scripts/openterm</command>
+      </action>
+    </keybind>
+  </keyboard>
     <mouse>
       <dragThreshold>1</dragThreshold>
         <!-- number of pixels the mouse must move before a drag begins -->
