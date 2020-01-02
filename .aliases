@@ -16,6 +16,6 @@ alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
 alias mv="mv -v"
 alias open="xdg-open"
-alias vi="nvi"
+test -f /bin/nvi && alias vi="nvi"
 alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
 
