@@ -48,6 +48,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'ajh17/VimCompletesMe'
 Plug 'tomasiser/vim-code-dark'
+Plug 'fatih/vim-go'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
