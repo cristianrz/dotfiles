@@ -1,6 +1,6 @@
 [Configuration]
-ColorForeground=#f2f2f2
-ColorBackground=#101010
+ColorForeground=#fffaf4
+ColorBackground=#0e1019
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -26,13 +26,15 @@ MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
-ColorPalette=#303030;#e1321a;#6ab017;#ffc005;#004f9e;#ec0048;#2aa7e7;#f2f2f2;#5d5d5d;#ff361e;#7bc91f;#ffd00a;#0071ff;#ff1d62;#4bb8fd;#a020f0
-ColorCursor=#f2f2f2
+ColorPalette=#232323;#ff000f;#8ce10b;#ffb900;#008df8;#6d43a6;#00d8eb;#ffffff;#444444;#ff2740;#abe15b;#ffd242;#0092ff;#9a5feb;#67fff0;#ffffff
+ColorCursor=#fffaf4
 ColorCursorUseDefault=FALSE
-FontName=Fira Code 15
+FontName=Fira Code 13
 FontAllowBold=FALSE
 ScrollingUnlimited=TRUE
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.950000
 CustomCommand=/usr/bin/mksh -l
+MiscSearchDialogOpacity=100
+MiscShowUnsafePasteDialog=TRUE
 
