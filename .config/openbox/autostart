@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Programs that will run after Openbox has started
+
+redshift -l 50:1 &
+pcmanfm --desktop &
+xfce4-panel &
+compton -b -c &
+redshift -l 50:1 &
