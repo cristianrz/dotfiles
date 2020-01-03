@@ -13,7 +13,14 @@ alias open="xdg-open"
 alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
 
 # This function searches through the history
-alias his="history 1000 | grep"
+case "$0" in
+  '-bash')
+    alias his="history 1000 | grep -i"
+    ;;
+  '-mksh')
+    alias his="history 1 | grep -i"
+    ;;
+esac
 
 # br edits file names in vim
 alias br="vimv;ls -1"
@@ -46,3 +53,5 @@ alias heimdall='sudo /usr/sbin/chroot /alpine /bin/sh -l'
 alias xid='xprop _NET_WM_PID | sed "/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
 
 alias gofmtall='gofmt -w $(find . -name "*.go")'
+
+alias pip="pip3"
