@@ -23,8 +23,9 @@ case "$0" in
   HISTSIZE='' HISTFILESIZE=
   ;;
 -mksh)
-  export PS1="[94m[49m\${PWD} 
- ↳ [106m[30m ${USER} \$ [39m[49m "
+  export PS1="[32m[49m\${PWD} 
+ ↳ [42m[30m ${USER} \$ [39m[49m "
+ HISTFILE="$HOME"/.mksh_history
   ;;
 esac
 
