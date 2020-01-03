@@ -9,13 +9,20 @@ alias cp="cp -v"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gofmtall='gofmt -w $(find . -name "*.go")'
 alias grep="grep --color=auto"
-alias his="history 1 | grep"
 alias ll="ls -lrt"
 alias ls='/bin/env ls -h --color=auto --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
+alias more="less"
 alias mv="mv -v"
 alias open="xdg-open"
 alias please='sudo $(fc -ln -1)'
 alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
+alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
+test ! -f /bin/pip && alias pip="pip3"
 test -f /bin/nvi && alias vi="nvi"
+
+case "$0" in
+  '-bash') alias his="history 1000 | grep -i" ;;
+  '-mksh') alias his="history 1 | grep -i" ;;
+esac
