@@ -23,6 +23,6 @@ test ! -f /bin/pip && alias pip="pip3"
 test -f /bin/nvi && alias vi="nvi"
 
 case "$0" in
-  '-bash') alias his="history 1000 | grep -i" ;;
-  '-mksh') alias his="history 1 | grep -i" ;;
+  *'bash') alias his="history 1000 | grep -i" ;;
+  *'mksh') alias his="history 1 | grep -i" ;;
 esac
