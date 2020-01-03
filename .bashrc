@@ -11,13 +11,6 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-# shopt -s histappend
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-# shopt -s checkwinsize
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -35,13 +28,10 @@ unset SSH_ASKPASS
 
 # Source global definitions
 # shellcheck disable=SC1091
-[ -f /etc/bashrc ] && . /etc/bashrc
+test -f /etc/bashrc && . /etc/bashrc
 
 for file in .exports .aliases .functions .local-env; do
   # shellcheck disable=SC1090
   [ -f ~/$file ] && . ~/$file
 done
 
-#if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-#  tmux attach -t default || tmux new -s default
-#fi
