@@ -1,0 +1,12 @@
+#!/bin/sh
+
+case "$1" in
+  "")
+    vlc -L -Z ~/Music/ >/dev/null 2>&1 &
+    ;;
+  *)
+    cd ~/Music
+    youtube-dl -x "$1"
+    ;;
+esac
+
