@@ -1,6 +1,6 @@
 #!/bin/sh
 if pgrep xfce4-terminal; then
-wmctrl -i -a $(wmctrl -l | grep -i thunderbird | cut -d ' ' -f 1)
+wmctrl -i -a "$(wmctrl -l | grep -i thunderbird | cut -d ' ' -f 1)"
 else
 xfce4-terminal &
 fi
