@@ -32,3 +32,4 @@ for file in .exports .aliases .functions .env-local; do
   [ -f ~/$file ] && . ~/$file
 done
 
+export PS1='$USER@${HOSTNAME%%.*}:$(basename $PWD) \$ '
