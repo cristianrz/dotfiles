@@ -11,6 +11,8 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
+HISTFILE="$HOME"/.mksh_history
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -30,4 +32,3 @@ for file in .exports .aliases .functions .env-local; do
   [ -f ~/$file ] && . ~/$file
 done
 
-HISTFILE="$HOME"/.mksh_history
