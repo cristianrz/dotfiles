@@ -9,18 +9,19 @@ export TERM="screen-256color"
 
 case "$0" in
   *'bash'*)
-    # get current branch in git repo
-    # shellcheck disable=SC1117
-    # shellcheck disable=SC2063
-    PS1="\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[32m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\e[m\] \[\e[31m\]►\[\e[m\] "
-    export PS1
-    HISTSIZE=''
-    HISTFILESIZE=''
-    # Infinite history.
-    ;;
+  # get current branch in git repo
+  # shellcheck disable=SC2063
+  # shellcheck disable=SC1117
+  PS1="\[\e[31m\]\u\[\e[m\] \[\e[34m\]\W\[\e[m\] \[\e[32m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\e[m\] \[\e[31m\]►\[\e[m\] "
+  export PS1
+  # Infinite history.
+  HISTSIZE='' HISTFILESIZE=
+  ;;
   *'mksh'*)
     # shellcheck disable=SC2025
-    export PS1="[30m[46m ${USER}:\$(basename \${PWD}) \$ [49m[39m "
-    ;;
+  export PS1="[32m[49m\${PWD} 
+ ↳ [42m[30m ${USER} \$ [39m[49m "
+ HISTFILE="$HOME"/.mksh_history
+  ;;
 esac
 
