@@ -58,6 +58,7 @@ set ic
 set number
 set shiftwidth=2
 set tabstop=2
+set mouse=a
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
