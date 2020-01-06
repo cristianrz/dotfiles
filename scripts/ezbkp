@@ -1,0 +1,72 @@
+#!/bin/sh
+# full system backup
+
+set -eu
+
+backorig=/media/data/
+
+backdest=/media/backups/tar
+backdest2=/media/qnap/tar
+backup_name="vera-container"
+date=$(date +%y%m%d%H%M%S)
+backupfile="$backdest/$backup_name-$date.tar.gz.gpg"
+
+die() {
+  echo "E: $1" >&2
+  exit 1
+}
+
+main() {
+  subcommand="${1:-}"
+  case "$subcommand" in
+  'do')
+    echo "The following backup is going to be performed:"
+    printf "\\tSource:      %s\\n" "$backorig"
+    printf "\\tDestination: %s\\n" "$backupfile"
+    printf "Do you want to continue? (y/n): "
+    read -r answer
+
+    test "$answer" != "y" && exit 1
+
+    test -n "$(find "$backorig" -name "*.tmp")" && die "Found .tmp files, please stop the programs using them (outlook?). Exiting now."
+
+    tar --xattrs -czpf - "$backorig" | gpg --cipher-algo AES256 --symmetric | (pv -p --timer --rate --bytes >"$backupfile")
+
+    echo "Copying to $backdest2..."
+    rsync --progress "$backupfile" "$backdest2"
+
+    echo "Calculating hash..."
+    md5sum "$backupfile" >>"$backdest"/hash.md5
+    ;;
+
+  list)
+    ls -1 "$backdest"
+    ;;
+  mount)
+    test ! -f "$backdest/$backup_name-$2.tar.gz.gpg" && die "File $backdest/$backup_name-$2.tar.gz.gpg does not exist"
+
+    rm -v /tmp/dec.tar.gz
+    rm -rfv /tmp/backup
+    mkdir -p /tmp/backup
+
+    echo "Decrypting..."
+    gpg --output /tmp/dec.tar.gz --decrypt "$backdest/$backup_name-$2.tar.gz.gpg" >/dev/null
+    echo "Extracting..."
+    tar --xattrs -xvpf /tmp/dec.tar.gz --directory /tmp/backup/ >/dev/null
+
+    echo "Mounted successfully to /tmp/backup"
+    ;;
+  unmount)
+    rm -rfv /tmp/backup
+    rm -fv /tmp/dec.tar.gz
+    echo "Unmounted"
+    ;;
+  *) die "Invalid option $subcommand, available commands are
+  do
+  list
+  mount <id>
+  unmount" ;;
+  esac
+}
+
+main "$@"
