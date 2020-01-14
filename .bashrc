@@ -1,10 +1,10 @@
-#!/bin/env sh
+#!/bin/sh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # If not running interactively, don't do anything
 case $- in
-*i*) ;;
-*) return ;;
+  *i*) ;;
+  *) return ;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -23,15 +23,16 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Stops git from prompting a graphical login
-unset SSH_ASKPASS
-
 # Source global definitions
 # shellcheck disable=SC1091
-test -f /etc/bashrc && . /etc/bashrc
+if test -f /etc/bashrc; then
+  . /etc/bashrc
+fi
 
 for file in .exports .aliases .functions .local-env; do
   # shellcheck disable=SC1090
-  [ -f ~/$file ] && . ~/$file
+  if test -f ~/$file; then
+    . ~/$file
+  fi
 done
 
