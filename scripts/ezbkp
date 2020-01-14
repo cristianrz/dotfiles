@@ -3,7 +3,7 @@
 
 set -eu
 
-backorig=/media/data/
+backorig=/media/windows-home/
 
 backdest=/media/backups/tar
 backdest2=/media/qnap/tar
@@ -28,7 +28,7 @@ main() {
 
     test "$answer" != "y" && exit 1
 
-    test -n "$(find "$backorig" -name "*.tmp")" && die "Found .tmp files, please stop the programs using them (outlook?). Exiting now."
+    #test -n "$(find "$backorig" -name "*.tmp")" && die "Found .tmp files, please stop the programs using them (outlook?). Exiting now."
 
     tar --xattrs -czpf - "$backorig" | gpg --cipher-algo AES256 --symmetric | (pv -p --timer --rate --bytes >"$backupfile")
 
@@ -37,6 +37,7 @@ main() {
 
     echo "Calculating hash..."
     md5sum "$backupfile" >>"$backdest"/hash.md5
+    md5sum "$backupfile" >>"$backdest2"/hash.md5
     ;;
 
   list)
