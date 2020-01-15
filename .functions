@@ -24,3 +24,6 @@ start() {
   nohup "$@" >/dev/null 2>&1 &
 }
 
+amionline() {
+  curl -m 1 -s -I https://duckduckgo.com > /dev/null && echo 'you are' || echo 'you are not'
+}
