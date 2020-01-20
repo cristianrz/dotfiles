@@ -55,7 +55,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -64,7 +64,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -73,7 +73,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -82,7 +82,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -91,7 +91,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -100,7 +100,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Hack</name>
+      <name>Segoe UI</name>
       <size>7</size>
       <!-- font size in points -->
       <weight>Normal</weight>
