@@ -7,7 +7,7 @@ cd() { builtin cd "$@" && ls && echo ""; }
 
 # opens a link inside a text file
 openlink() {
-  nohup xdg-open "$(cat "$1")" >/dev/null 2>&1 &
+  xdg-open "$(cat "$1")" >/dev/null 2>&1 &
 }
 
 # Chowns a folder to yourself
