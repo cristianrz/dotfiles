@@ -43,7 +43,7 @@ endif
 call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'mattn/emmet-vim'
-Plug 'chiel92/vim-autoformat'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'ajh17/VimCompletesMe'
@@ -58,6 +58,7 @@ set ic
 set number
 set shiftwidth=2
 set tabstop=2
+set mouse=a
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
