@@ -5,3 +5,4 @@
 redshift -l 50:1 &
 xfce4-panel &
 compton -b -c &
+nm-applet &
