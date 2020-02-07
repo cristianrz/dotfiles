@@ -6,8 +6,8 @@ set -eu
 backorig=/media/windows-home/
 
 backdest=/media/backups/tar
-backdest2=/media/qnap/tar
-backup_name="vera-container"
+backdest2=/media/windows-home/tars
+backup_name="windows-home"
 date=$(date +%y%m%d%H%M%S)
 backupfile="$backdest/$backup_name-$date.tar.gz.gpg"
 
@@ -30,7 +30,7 @@ main() {
 
     #test -n "$(find "$backorig" -name "*.tmp")" && die "Found .tmp files, please stop the programs using them (outlook?). Exiting now."
 
-    tar --xattrs -czpf - "$backorig" | gpg --cipher-algo AES256 --symmetric | (pv -p --timer --rate --bytes >"$backupfile")
+    tar --xattrs --exclude='/media/windows-home/AppData' --exclude='./AppData' --exclude='AppData' -czpf - "$backorig" | gpg --cipher-algo AES256 --symmetric | (pv -p --timer --rate --bytes >"$backupfile")
 
     echo "Copying to $backdest2..."
     rsync --progress "$backupfile" "$backdest2"
