@@ -1,5 +1,10 @@
 #!/bin/env sh
 #
+# Copyright 2019 Cristian Ariza
+#
+# See LICENSE file for license details.
+# ~/.bashrc: executed by bash(1) for non-login shells.
+#
 # Exported variables
 
 test -d "$HOME"/.local/bin && export PATH="$HOME"/.local/bin:"$PATH"

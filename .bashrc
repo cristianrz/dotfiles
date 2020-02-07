@@ -1,4 +1,7 @@
 #!/bin/sh
+# Copyright 2019 Cristian Ariza
+#
+# See LICENSE file for license details.
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # If not running interactively, don't do anything

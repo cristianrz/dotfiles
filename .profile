@@ -1,5 +1,10 @@
 #!/bin/sh
-# executed by the command interpreter for login shells.
+#
+# Copyright 2019 Cristian Ariza
+#
+# See LICENSE file for license details.
+#
+# .profile: executed by the command interpreter for login shells.
 
 # Stops git from prompting a graphical login
 unset SSH_ASKPASS
