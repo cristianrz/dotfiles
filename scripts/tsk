@@ -1,0 +1,67 @@
+#!/bin/sh
+while true; do
+	file=$(mktemp)
+	sort -t, -k 4 ~/tasks.csv >"$file"
+	cp ~/tasks.csv ~/tasks.csv.bkp
+	cp "$file" ~/tasks.csv
+
+	printf 'tsk> '
+	read -r args
+	set -- $args
+
+	com="$1"
+	shift
+
+	case "$com" in
+		ls)
+			hdr="ID,Assignee,Task name,Category,Due,Created"
+			sep="==,========,=========,========,===,======="
+			printf "$hdr\n$sep\n$(cat ~/tasks.csv)\n" | column -s, -t
+			;;
+		next)
+			hdr="ID,Assignee,Task name,Category,Due,Created"
+			sep="==,========,=========,========,===,======="
+			printf "$hdr\n$sep\n$(head -n 1 ~/tasks.csv)\n" | column -s, -t
+			;;
+		exit)
+			exit 0
+			;;
+		add)
+			hash="$(date | md5sum | head -c 5)"
+			printf 'assignee: ' && read -r assignee
+			printf 'task name: ' && read -r name
+			printf 'category: ' && read -r category
+			printf 'due date: ' && read -r due
+
+			echo "$hash,$assignee,$name,$category,$due,$(date +%y%m%d%H)" >>~/tasks.csv
+			;;
+		edit)
+			vi ~/tasks.csv
+			;;
+		"do")
+			file="$(mktemp)"
+
+			if test "$#" -eq 0; then
+				continue
+			fi
+
+			filter="$1"
+			shift
+
+			printf "[$(date)]: " >>~/tasks_done.csv
+
+			task="$(grep "$filter" ~/tasks.csv)"
+
+			printf "Done: %s\\n" "$task"
+			echo "$task" >>~/tasks_done.csv
+
+			grep -v "$filter" ~/tasks.csv >"$file"
+
+			cp ~/tasks.csv ~/tasks.csv.bkp
+			cp "$file" ~/tasks.csv
+			;;
+		*)
+			echo 'tsk: option not recognized'
+			;;
+	esac
+done
