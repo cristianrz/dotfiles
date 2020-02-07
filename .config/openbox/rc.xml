@@ -40,7 +40,7 @@
       'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx-Citrus</name>
+    <name>Raven-Cyan</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
         available characters are NDSLIMC, each can occur at most once.
@@ -55,8 +55,8 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -64,8 +64,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -73,8 +73,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -82,8 +82,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -91,8 +91,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -100,8 +100,8 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Segoe UI</name>
-      <size>8</size>
+      <name>Chivo</name>
+      <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -151,10 +151,10 @@
       Many programs reserve space automatically, but you can use this in other
     cases. -->
   <margins>
-    <top>15</top>
-    <bottom>45</bottom>
-    <left>15</left>
-    <right>15</right>
+    <top>42</top>
+    <bottom>10</bottom>
+    <left>10</left>
+    <right>10</right>
   </margins>
   <dock>
     <position>Bottom</position>

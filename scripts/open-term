@@ -1,6 +1,6 @@
 #!/bin/sh
-if pgrep xfce4-terminal; then
-wmctrl -i -a $(wmctrl -l | grep -i thunderbird | cut -d ' ' -f 1)
+if pgrep sakura; then
+  wmctrl -i -a "$(wmctrl -l | grep -i sakura | cut -d ' ' -f 1)"
 else
-xfce4-terminal &
+  sakura &
 fi
