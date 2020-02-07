@@ -181,6 +181,11 @@
         <desktop>1</desktop>
       </action>
     </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Execute">
+        <command>xterm -e /home/cariza/scripts/bye</command>
+      </action>
+    </keybind>
     <keybind key="S-A-Right">
       <action name="SendToDesktop">
         <desktop>1</desktop>
