@@ -53,11 +53,8 @@ Plug 'fatih/vim-go'
 call plug#end()
 
 set colorcolumn=80
-set expandtab
 set ic
 set number
-set shiftwidth=2
-set tabstop=2
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
