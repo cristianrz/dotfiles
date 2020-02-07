@@ -1,0 +1,6 @@
+#!/bin/bash
+pkglist=/home/"$SUDO_USER"/.pacman-packages
+# shellcheck disable=SC2046
+pacman -S --needed - < "$(pkglist)"
+# shellcheck disable=SC2046
+pacman -Rsu $(comm -23 <(pacman -Qq | sort) <(sort "$pkglist"))
