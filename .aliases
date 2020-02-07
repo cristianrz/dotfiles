@@ -26,3 +26,5 @@ case "$0" in
   *'bash') alias his="history 1000 | grep -i" ;;
   *'mksh') alias his="history 1 | grep -i" ;;
 esac
+
+alias stop='sudo shutdown -h now'
