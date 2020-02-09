@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Extracts a compressed file in different formats
 
 case "$1" in
 *.tbz2 | *.tar.bz2) tar fjvx "$1" ;;

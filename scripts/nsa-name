@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Generates a random name similar to the NSA project names
 
 main() {
 	local noun
