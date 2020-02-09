@@ -30,3 +30,4 @@ for file in .exports .aliases .functions; do
   [ -f ~/$file ] && . ~/$file
 done
 
+unset file
