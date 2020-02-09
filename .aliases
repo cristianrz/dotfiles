@@ -16,6 +16,4 @@ alias mv="mv -v"
 alias open="xdg-open"
 alias shfmt="shfmt -s -i 0 -sr -w"
 alias vi="nvi"
-alias xid='xprop _NET_WM_PID | sed "s/_NET_WM_PID(CARDINAL) = //" | ps "$(cat)"'
-alias yt2mp3="youtube-dl --extract-audio --audio-format mp3"
 test ! -f /bin/pip && alias pip="pip3"
