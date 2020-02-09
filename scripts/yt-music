@@ -1,12 +1,9 @@
-#!/bin/sh
+#!/bin/dash
 
 case "$1" in
-  "")
-    vlc -L -Z ~/Music/ >/dev/null 2>&1 &
-    ;;
-  *)
-    cd ~/Music || exit
-    youtube-dl -x "$1"
-    ;;
+"") vlc -L -Z ~/Music/ > /dev/null 2>&1 &;;
+*)
+	cd ~/Music || exit
+	youtube-dl -x "$1"
+	;;
 esac
-

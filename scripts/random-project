@@ -1,24 +1,24 @@
 #!/bin/bash
 
 main() {
-  local noun
-  local adjective
+	local noun
+	local adjective
 
-  cd "$(dirname "$0")"/project.d || exit
+	cd "$(dirname "$0")"/project.d || exit
 
-  noun=$(shuf -n 1 nouns.txt)
-  adjective=$(shuf -n 1 adjectives.txt)
+	noun=$(shuf -n 1 nouns.txt)
+	adjective=$(shuf -n 1 adjectives.txt)
 
-  case "$1" in
-  "nice")
-    adjective=${adjective^}
-    noun=${noun^}
-    echo "$adjective $noun"
-    ;;
-  *)
-    echo "$adjective-$noun"
-    ;;
-  esac
+	case "$1" in
+	"nice")
+		adjective=${adjective^}
+		noun=${noun^}
+		echo "$adjective $noun"
+		;;
+	*)
+		echo "$adjective-$noun"
+		;;
+	esac
 }
 
 main "$@"
