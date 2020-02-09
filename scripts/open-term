@@ -1,6 +1,13 @@
 #!/bin/sh
-if pgrep sakura; then
-  wmctrl -i -a "$(wmctrl -l | grep -i sakura | cut -d ' ' -f 1)"
+#
+# If a terminal is open, raise it. Otherwise, open a new one.
+
+TERMINAL="sakura"
+
+if pgrep "$TERMINAL"; then
+	wmctrl -a "$TERMINAL"
 else
-  sakura &
+	"$TERMINAL" &
 fi
+
+unset TERMINAL
