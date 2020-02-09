@@ -25,6 +25,7 @@
         <value type="int" value="4"/>
         <value type="int" value="10"/>
         <value type="int" value="15"/>
+        <value type="int" value="14"/>
       </property>
       <property name="background-style" type="uint" value="1"/>
       <property name="background-rgba" type="array">
@@ -38,7 +39,7 @@
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="applicationsmenu">
       <property name="show-button-title" type="bool" value="false"/>
-      <property name="button-icon" type="string" value="start-here"/>
+      <property name="button-icon" type="string" value="distributor-logo-ubuntu-gnome"/>
     </property>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="grouping" type="uint" value="1"/>
@@ -59,6 +60,7 @@
       <property name="show-frame" type="bool" value="false"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="trojita"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="vorta"/>
         <value type="string" value="vlc"/>
@@ -88,6 +90,11 @@
     </property>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="15811572971.desktop"/>
+      </property>
     </property>
   </property>
 </channel>
