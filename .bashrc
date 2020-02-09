@@ -25,7 +25,7 @@ unset SSH_ASKPASS
 # shellcheck disable=SC1091
 test -f /etc/bashrc && . /etc/bashrc
 
-for file in .exports .aliases .functions; do
+for file in .private .exports .aliases .functions; do
   # shellcheck disable=SC1090
   [ -f ~/$file ] && . ~/$file
 done
