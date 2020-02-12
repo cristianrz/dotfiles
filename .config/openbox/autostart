@@ -2,7 +2,10 @@
 
 # Programs that will run after Openbox has started
 
+compton -b -c &
+connman-gtk &
+nm-applet &
+pcmanfm --desktop &
 redshift -l 50:1 &
 xfce4-panel &
-compton -b -c &
-nm-applet &
+xfce4-power-manager &

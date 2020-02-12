@@ -30,7 +30,6 @@ endif
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
-Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomasiser/vim-code-dark'
@@ -40,12 +39,10 @@ call plug#end()
 set colorcolumn=80
 set ic
 set number
-set mouse=a
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+set shiftwidth=4
+set tabstop=4
+set mouse=a
 
 let g:NERDTreeWinSize=25
 
@@ -63,4 +60,3 @@ let NERDTreeShowHidden=1
 
 au VimEnter * NERDTree
 au VimEnter * wincmd p
-
