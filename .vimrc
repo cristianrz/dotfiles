@@ -1,9 +1,3 @@
-" When started as "evim", evim.vim will already have done these settings, bail
-" out.
-"if v:progname =~? "evim"
-"  finish
-"endif
-
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
@@ -42,13 +36,9 @@ endif
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 " Declare the list of plugins.
-Plug 'mattn/emmet-vim'
-Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'ajh17/VimCompletesMe'
 Plug 'tomasiser/vim-code-dark'
-Plug 'fatih/vim-go'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -56,14 +46,9 @@ set colorcolumn=80
 set expandtab
 set ic
 set number
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set mouse=a
-
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
 
 let g:NERDTreeWinSize=25
 
