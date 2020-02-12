@@ -4,6 +4,11 @@
 # See LICENSE file for license details.
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+if test "$PURE" = true; then
+	PS1='> '
+	return
+fi
+
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;

@@ -1,67 +1,49 @@
 #!/bin/sh
-while true; do
-	file=$(mktemp)
-	sort -t, -k 4 ~/tasks.csv >"$file"
-	cp ~/tasks.csv ~/tasks.csv.bkp
-	cp "$file" ~/tasks.csv
 
-	printf 'tsk> '
-	read -r args
-	set -- $args
+DIR="$(
+        cd "$(dirname "$0")"
+        pwd
+)"
 
-	com="$1"
-	shift
+TSKPATH="$HOME"/.cache/tsk
+TSKDONE="$TSKPATH"/tasks_done.csv
+TSKFILE="$TSKPATH"/tasks.csv
+TSKBKP="$TSKFILE".bkp
 
-	case "$com" in
-		ls)
-			hdr="ID,Assignee,Task name,Category,Due,Created"
-			sep="==,========,=========,========,===,======="
-			printf "$hdr\n$sep\n$(cat ~/tasks.csv)\n" | column -s, -t
-			;;
-		next)
-			hdr="ID,Assignee,Task name,Category,Due,Created"
-			sep="==,========,=========,========,===,======="
-			printf "$hdr\n$sep\n$(head -n 1 ~/tasks.csv)\n" | column -s, -t
-			;;
-		exit)
-			exit 0
-			;;
-		add)
-			hash="$(date | md5sum | head -c 5)"
-			printf 'assignee: ' && read -r assignee
-			printf 'task name: ' && read -r name
-			printf 'category: ' && read -r category
-			printf 'due date: ' && read -r due
+. "$DIR"/tsk.sh
 
-			echo "$hash,$assignee,$name,$category,$due,$(date +%y%m%d%H)" >>~/tasks.csv
-			;;
-		edit)
-			vi ~/tasks.csv
-			;;
-		"do")
-			file="$(mktemp)"
+set -u
 
-			if test "$#" -eq 0; then
-				continue
-			fi
+main() {
+        while true; do
+                cp "$TSKFILE" "$TSKBKP"
+                sort -t, -k 4 "$TSKBKP" >"$TSKFILE"
 
-			filter="$1"
-			shift
+                printf 'tsk> ' && read -r args
+                # shellcheck disable=SC2086
+                set -- $args
 
-			printf "[$(date)]: " >>~/tasks_done.csv
+                com="$1" && shift
+                case "$com" in
+                "do")
+                        if tskdo "$1"; then
+                                tail -n 1 "$TSKDONE"
+                        fi
+                        ;;
+                add)
+                        printf 'assignee: ' && read -r assignee
+                        printf 'task name: ' && read -r name
+                        printf 'category: ' && read -r category
+                        printf 'due date: ' && read -r due
 
-			task="$(grep "$filter" ~/tasks.csv)"
+                        tskadd "$assignee" "$name" "$category" "$due" "$(date +%y%m%d%H)"
+                        ;;
+                edit) vi "$TSKFILE" ;;
+                exit) exit 0 ;;
+                ls) tskls ;;
+                *) echo 'tsk: option not recognized' >&2 ;;
+                esac
+        done
+}
 
-			printf "Done: %s\\n" "$task"
-			echo "$task" >>~/tasks_done.csv
-
-			grep -v "$filter" ~/tasks.csv >"$file"
-
-			cp ~/tasks.csv ~/tasks.csv.bkp
-			cp "$file" ~/tasks.csv
-			;;
-		*)
-			echo 'tsk: option not recognized'
-			;;
-	esac
-done
+main
