@@ -1,0 +1,6 @@
+#!/bin/sh
+if pgrep sakura; then
+  wmctrl -i -a "$(wmctrl -l | grep -i sakura | cut -d ' ' -f 1)"
+else
+  sakura &
+fi
