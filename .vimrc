@@ -50,11 +50,6 @@ set shiftwidth=4
 set tabstop=4
 set mouse=a
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 let g:NERDTreeWinSize=25
 
 set backupdir=.vim/,~/.vim/backups/,/tmp/
@@ -71,4 +66,3 @@ let NERDTreeShowHidden=1
 
 au VimEnter * NERDTree
 au VimEnter * wincmd p
-
