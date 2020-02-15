@@ -1,0 +1,20 @@
+//#xfce4-notification-plugin * {
+//  -gtk-icon-transform: scale(0.6);
+//}
+//
+//#pulseaudio-button * {
+//  -gtk-icon-transform: scale(0.6);
+//}
+//
+//#xfce4-power-manager-plugin {
+//  -gtk-icon-transform: scale(0.6);
+//}
+//
+//#*action* {
+//  -gtk-icon-transform: scale(0.6);
+//}
+
+.xfce4-panel {
+	font-family: "Roboto";
+	font-size: 16px;
+}
