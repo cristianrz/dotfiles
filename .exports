@@ -21,7 +21,6 @@ export TERM="screen-256color"
 # Infinite history.
 HISTFILESIZE=
 #PS1="[97;44m \${USER} [37;100m \$(basename \$PWD) \$ [39;49m " export PS1
-PS1="\${USER} \$(basename \$PWD) \$ " export PS1
 
 PATH=
 path_add '.'
