@@ -1,9 +1,0 @@
-#!/bin/sh
-# Shows packages installed ordered by size
-if test -n "$1"; then
-    n="$1"
-else
-    n=10
-fi
-
-dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n "$n"
