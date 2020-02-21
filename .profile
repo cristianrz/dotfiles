@@ -18,3 +18,7 @@ if test -n "$BASH_VERSION" && test -f "$HOME/.bashrc"; then
   # shellcheck disable=SC1090
   . "$HOME/.bashrc"
 fi
+
+case "$1" in
+*mksh*) .  ~/.mkshrc ;;
+esac
