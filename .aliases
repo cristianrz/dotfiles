@@ -2,17 +2,19 @@
 #
 # Aliases
 
-alias :q="exit"
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
 alias cp="cp -v"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="/bin/env grep --color=auto"
 alias his="history 1000 | grep -i"
 alias ll="ls -lrt"
-alias ls='/bin/env ls -h --color=auto --group-directories-first'
+#alias ls='/bin/env ls -h --color=auto --group-directories-first'
+alias ls='/bin/env ls -h --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
 alias mv="mv -v"
 alias open="xdg-open"
-alias shfmt="shfmt -s -i 0 -sr -w"
+alias shfmt="shfmt -s -i 0 -w"
+alias unstow="stow -D"
 test ! -f /bin/pip && alias pip="pip3"
+alias vi="vim.tiny"
