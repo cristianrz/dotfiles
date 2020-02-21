@@ -1,0 +1,19 @@
+#!/bin/env sh
+
+set -e
+
+usage="usage: $(basename "$0") [URL]"
+
+if [ "$#" -lt 1 ]; then
+    printf '%s\n' "$usage" >&2
+    exit 1
+fi
+
+URL="$1" && shift
+
+TMP="$(mktemp -d)"
+trap 'rm -rf "$TMP"' EXIT
+
+
+git clone --depth 1 "$URL" "$TMP"
+cloc "$TMP"

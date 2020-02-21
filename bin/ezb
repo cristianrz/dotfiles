@@ -20,8 +20,8 @@ PV="pv -p --timer --rate --bytes"
 # Functions
 ###########
 
-TAR(){
-    tar --xattrs --exclude="/media/windows-home/AppData" --exclude="./AppData" --exclude="AppData" -czpf - "$@"
+TAR() {
+	tar --xattrs --exclude="/media/windows-home/AppData" --exclude="./AppData" --exclude="AppData" -czpf - "$@"
 }
 
 die() {
@@ -29,25 +29,25 @@ die() {
 	exit 1
 }
 
-backup(){
-    echo "Backing up to main repo..."
+backup() {
+	echo "Backing up to main repo..."
 	TAR "$BACKUP_ORIG" | $GPG | ($PV >"$FILE_NAME") || return "$?"
 	md5sum "$FILE_NAME" >>"$BACKUP_DEST"/hash.md5 || return "$?"
 
-    #echo "Backing up to secondary repo..."
+	#echo "Backing up to secondary repo..."
 	#rsync --progress "$FILE_NAME" "$BACKUP_DEST2"|| return "$?"
 	#md5sum "$FILE_NAME" >>"$BACKUP_DEST2"/hash.md5 || return "$?"
 }
 
-list(){
+list() {
 	ls -1 "$BACKUP_DEST"
 }
 
-quiet(){
-    "$@" || return "$?" > /dev/null
+quiet() {
+	"$@" || return "$?" >/dev/null
 }
 
-mount(){
+mount() {
 	if [ ! -f "$BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg" ]; then
 		die "file $BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg does not exist"
 	fi
@@ -59,14 +59,14 @@ mount(){
 	echo "=> Decrypting..."
 	quiet gpg --output /tmp/dec.tar.gz --decrypt "$BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg"
 	echo "=> Extracting..."
-	quiet tar --xattrs -xvpf /tmp/dec.tar.gz --directory /tmp/backup/  || return "$?"
+	quiet tar --xattrs -xvpf /tmp/dec.tar.gz --directory /tmp/backup/ || return "$?"
 
 	echo "/tmp/backup."
 }
 
-unmount(){
+unmount() {
 	rm -f /tmp/backup/* || return "$?"
-    rmdir /tmp/backup || return "$?"
+	rmdir /tmp/backup || return "$?"
 	rm -f /tmp/dec.tar.gz || return "$?"
 }
 

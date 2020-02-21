@@ -1,0 +1,2 @@
+sleep 5s
+printf 'finished at %s\n' "$(date)" | mail cariza
