@@ -1,8 +1,8 @@
 #!/bin/sh
 
-TSKBKP="$HOME"/.cache/tsk/tasks.csv.bkp
-TSKDONE="$HOME"/.cache/tsk/tasks_done.csv
-TSKFILE="$HOME"/.cache/tsk/tasks.csv
+TSKBKP="$HOME"/.cache/tsk/backup.csv
+TSKDONE="$HOME"/.cache/tsk/done.log
+TSKFILE="$HOME"/.cache/tsk/pending.csv
 
 set -u
 
