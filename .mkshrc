@@ -36,21 +36,12 @@ PS1=$p$'\r${debian_chroot:+'$p$'\e[0;1m'$p'($debian_chroot)'$p$'\e[0m'$p'}'$PS1
 \: put your local alias/function definitions, patches, etc. here
 
 . ~/.aliases
+. ~/.exports
 
-# fixup ncurses-term badness
-#[[ $TERM = screen.* ]] && TERM=screen
+HISTFILE="$HOME"/.mksh_history
 
-# force sane environment (e.g. for scripting), Debian-specific libc patch
-#\\builtin export LC_ALL=C.UTF-8
-# - or - switch to a slightly user-friendly and more portable locale
-#\\builtin unset LANGUAGE LC_ADDRESS LC_ALL LC_COLLATE LC_IDENTIFICATION LC_MONETARY \
-#    LC_NAME LC_NUMERIC LC_TELEPHONE LC_TIME
-#p=en_GB.UTF-8
-#\\builtin export LANG=C LC_CTYPE=$p LC_MEASUREMENT=$p LC_MESSAGES=$p LC_PAPER=$p
-
-# in either case: sync mksh UTF-8 mode to current locale (expected on GNU)
 \\builtin set -U; [[ ${LC_ALL:-${LC_CTYPE:-${LANG:-}}} = *[Uu][Tt][Ff]?(-)8* ]] || \\builtin set +U
 
-#\\builtin unset p
+\\builtin unset p
 
 \: make sure this is the last line, to ensure a good return code
