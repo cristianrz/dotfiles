@@ -1,14 +1,44 @@
 #!/bin/sh
 
+flags=
+
 case "$1" in
-*.tbz2 | *.tar.bz2) tar fjvx "$1" ;;
-*.tar | *.tar.xz) tar fvx "$1" ;;
-*.tgz | *.tar.gz) tar fvxz "$1" ;;
-*.7z) 7za x "$1" ;;
-*.Z) uncompress "$1" ;;
-*.bz2) bunzip2 "$1" ;;
-*.gz) gunzip "$1" ;;
-*.rar) unrar e "$1" ;;
-*.zip) unzip "$1" ;;
-*) echo "'$1' cannot be extracted" ;;
+*.tbz2 | *.tar.bz2)
+    cmd="tar"
+    flags="fjvx"
+    ;;
+*.tar | *.tar.xz)
+    cmd="tar"
+    flags="fvx"
+    ;;
+*.tgz | *.tar.gz)
+    cmd="tar"
+    flags="fvxz"
+    ;;
+*.7z)
+    cmd="7za"
+    flags="x"
+    ;;
+*.Z)
+    cmd="uncompress"
+    ;;
+*.bz2)
+    cmd="bunzip2"
+    ;;
+*.gz)
+    cmd="gunzip"
+    ;;
+*.rar)
+    cmd="unrar"
+    flags="e"
+    ;;
+*.zip)
+    cmd="unzip"
+    ;;
+*)
+    printf '%s: not sure how to extract %s' "$(basename "$0")" "$1" >&2
+    exit 1
+    ;;
 esac
+
+exec "$cmd" "$flags" "$@"
