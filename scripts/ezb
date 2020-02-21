@@ -1,0 +1,113 @@
+#!/bin/env ksh
+# folder backup
+
+shellcheck "$0" || exit "$?"
+
+set -eu -o pipefail
+
+########
+# Consts
+########
+
+#BACKUP_DEST2=/media/windows-home/tars
+BACKUP_DEST=/media/backups/tar
+BACKUP_NAME=windows-home
+BACKUP_ORIG=/media/windows-home/
+GPG="gpg --cipher-algo AES256 --symmetric"
+PV="pv -p --timer --rate --bytes"
+
+###########
+# Functions
+###########
+
+TAR(){
+    tar --xattrs --exclude="/media/windows-home/AppData" --exclude="./AppData" --exclude="AppData" -czpf - "$@"
+}
+
+die() {
+	printf '%s: %s\n' "$(basename "$0")" "$*" >&2
+	exit 1
+}
+
+backup(){
+    echo "Backing up to main repo..."
+	TAR "$BACKUP_ORIG" | $GPG | ($PV >"$FILE_NAME") || return "$?"
+	md5sum "$FILE_NAME" >>"$BACKUP_DEST"/hash.md5 || return "$?"
+
+    #echo "Backing up to secondary repo..."
+	#rsync --progress "$FILE_NAME" "$BACKUP_DEST2"|| return "$?"
+	#md5sum "$FILE_NAME" >>"$BACKUP_DEST2"/hash.md5 || return "$?"
+}
+
+list(){
+	ls -1 "$BACKUP_DEST"
+}
+
+quiet(){
+    "$@" || return "$?" > /dev/null
+}
+
+mount(){
+	if [ ! -f "$BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg" ]; then
+		die "file $BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg does not exist"
+	fi
+
+	rm /tmp/dec.tar.gz
+	rm -f /tmp/backup/*
+	mkdir -p /tmp/backup
+
+	echo "=> Decrypting..."
+	quiet gpg --output /tmp/dec.tar.gz --decrypt "$BACKUP_DEST/$BACKUP_NAME-$2.tar.gz.gpg"
+	echo "=> Extracting..."
+	quiet tar --xattrs -xvpf /tmp/dec.tar.gz --directory /tmp/backup/  || return "$?"
+
+	echo "/tmp/backup."
+}
+
+unmount(){
+	rm -f /tmp/backup/* || return "$?"
+    rmdir /tmp/backup || return "$?"
+	rm -f /tmp/dec.tar.gz || return "$?"
+}
+
+######
+# Main
+######
+
+DATE=$(date +%y%m%d%H%M%S)
+FILE_NAME="$BACKUP_DEST"/"$BACKUP_NAME"-"$DATE".tar.gz.gpg
+usage="usage: $(basename "$0") [COMMAND]
+
+Available commands:
+    backup   performs a backup
+    list     lists available backups
+    mount    mounts a backup temporarily
+    unmount  unmounts the temporary mount"
+
+if [ "$#" -lt 1 ]; then
+	printf '%s\n' "$usage" >&2
+	exit 1
+fi
+
+subcommand="$1" && shift
+case "x$subcommand" in
+xbackup)
+	echo "The following backup is going to be performed:"
+	printf '\tSource:      %s\n' "$BACKUP_ORIG"
+	printf '\tDestination: %s\n' "$FILE_NAME"
+	printf "Do you want to continue? (y/n): "
+	read -r yn
+
+	case "$yn" in
+	y | Y | yes | YES | Yes) ;;
+	*) die "aborted by the user" ;;
+	esac
+	;;
+xlist | xmount | xunmount) ;;
+*)
+	printf '%s\n' "$usage" >&2
+	exit 1
+	;;
+esac
+
+eval "$subcommand" "$@"
