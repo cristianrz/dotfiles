@@ -51,3 +51,23 @@ path_add /usr/bin
 path_add /usr/sbin
 path_add /usr/local/plan9/bin
 export PATH
+
+###########
+# Functions
+###########
+
+# ls and print a new line after cd
+c() {
+	cd "$@" &&
+	ls &&
+	echo ""
+}
+
+# opens a link inside a text file
+openlink() {
+	xdg-open "$(cat "$1")" > /dev/null 2>&1 &
+}
+
+amimullvad() {
+	curl -s https://am.i.mullvad.net/connected
+}
