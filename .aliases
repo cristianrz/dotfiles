@@ -15,11 +15,11 @@ alias gofmtall='gofmt -w $(find . -name "*.go")'
 alias grep="grep --color=auto"
 alias his="history 1000 | grep -i"
 alias ll="ls -lrt"
-alias ls='/bin/env ls -h --color=auto --group-directories-first'
+alias ls='/bin/env ls -h --group-directories-first'
 alias lsa='/bin/env ls -hA --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
 alias mv="mv -v"
 alias open="xdg-open"
 alias shfmt="shfmt -s -i 0 -sr -w"
 test ! -f /bin/pip && alias pip="pip3"
-test -f /bin/nvi && alias vi="nvi"
+alias vim="vim.tiny"
