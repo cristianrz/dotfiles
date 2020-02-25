@@ -1,9 +1,5 @@
 #!/bin/ksh
 
-###################
-# /etc/skel/.mkshrc
-###################
-
 # check if this is really mksh
 case ${KSH_VERSION:-} in
 *LEGACY\ KSH*|*MIRBSD\ KSH*) ;;
@@ -43,15 +39,6 @@ unset p
 set -U; [[ ${LC_ALL:-${LC_CTYPE:-${LANG:-}}} = *[Uu][Tt][Ff]?(-)8* ]] || \\builtin set +U
 
 unset p
-
-######
-# mine
-######
-
-# shellcheck source=.aliases
-. "$HOME"/.aliases
-# shellcheck source=.exports
-. "$HOME"/.exports
 
 HISTFILE="$HOME"/.mksh_history
 
