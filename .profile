@@ -19,7 +19,6 @@ alias mv="mv -v"
 alias open="xdg-open"
 alias shfmt="shfmt -s -i 0 -w"
 alias unstow="stow -D"
-alias vi="vim.tiny"
 test ! -f /bin/pip && alias pip="pip3"
 
 #########
@@ -42,13 +41,10 @@ path_add(){
 }
 
 PATH=
-path_add '.'
 path_add "$HOME"/bin
 path_add "$HOME"/go/bin
 path_add /usr/local/bin
-path_add /usr/local/sbin
 path_add /usr/bin
-path_add /usr/sbin
 path_add /usr/local/plan9/bin
 export PATH
 
@@ -71,3 +67,20 @@ openlink() {
 amimullvad() {
 	curl -s https://am.i.mullvad.net/connected
 }
+
+if [ -n "$(cat "$HOME"/.cache/tsk/pending.csv)" ]; then
+	tsk p
+	echo
+fi
+
+#########
+# Sources
+#########
+
+. "$HOME"/.private
+
+##########
+# Bindings
+##########
+
+bind '^L=clear-screen'
