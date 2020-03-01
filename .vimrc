@@ -7,14 +7,6 @@ else
   endif
 endif
 
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-augroup END
-
 set colorcolumn=79
 set ic
 set number
@@ -25,7 +17,5 @@ set undodir=.vim/,~/.vim/backups/,/tmp/
 
 set t_Co=256
 set t_ut=
-set splitbelow
-set termwinsize=8x0
 set backspace=indent,eol,start
 set nocp

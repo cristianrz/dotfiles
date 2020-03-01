@@ -8,15 +8,14 @@
 
 # Stops git from prompting a graphical login
 unset SSH_ASKPASS
-EDITOR="vi"
 
-# source the system-wide mkshrc file
-[[ -s /etc/mkshrc ]] && . /etc/mkshrc
+# Sources
 
-#########
+# shellcheck source=/dev/null
+[ -f "$HOME"/.private ] && . "$HOME"/.private
+[ -s /etc/mkshrc ] && . /etc/mkshrc
+
 # Aliases
-#########
-
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
 alias cp="cp -v"
 alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
@@ -24,75 +23,54 @@ alias grep="/bin/env grep --color=auto"
 alias his="history 1000 | grep -i"
 alias ll="ls -lrt"
 alias ls='/bin/env ls -N -h --group-directories-first'
-alias mkdir="mkdir -v"
-alias mv="mv -v"
-alias open="xdg-open"
-alias shfmt="shfmt -s -i 0 -w"
-alias unstow="stow -D"
-test ! -f /bin/pip && alias pip="pip3"
+alias mkdir="/bin/env mkdir -v"
+alias mv="/bin/env mv -v"
+alias open="/bin/env xdg-open"
+alias shfmt="/bin/env shfmt -s -i 0 -w"
+alias unstow="/bin/env stow -D"
 
-#########
 # Exports
-#########
-
-
 export GOBIN="$HOME/go/bin"
 export GOPATH="$HOME/go"
-export TERM="screen-256color"
-
-export HISTFILESIZE= # Infinite history
 export HISTFILE="$HOME"/.mksh_history
+export HISTFILESIZE= # Infinite history
+export TERM="screen-256color"
 
 path_add(){
     case "$PATH" in
     "") PATH="$*" ;;
-    *) PATH="$PATH":"$*" ;;
+    *) PATH="$PATH:$*" ;;
     esac
 }
 
-PATH=
+unset PATH
 path_add "$HOME"/bin
 path_add "$HOME"/go/bin
 path_add /usr/local/bin
+path_add /usr/local/go/bin
 path_add /usr/bin
 path_add /bin
 export PATH
 
-###########
+PS1='[31m$(e=$?; (( e )) && printf "(%s) " "$e")[36m$USER[90m@[95m$HOSTNAME [90m${PWD##*/} [36m$[39m '
+export PS1
+
 # Functions
-###########
+amimullvad() { curl -s https://am.i.mullvad.net/connected; }
 
-# ls and print a new line after cd
-c() {
-	cd "$@" &&
-	ls &&
-	echo ""
-}
-
-# opens a link inside a text file
-openlink() {
-	xdg-open "$(cat "$1")" > /dev/null 2>&1 &
-}
+# Bindings
 
 case "$0" in
-*bash*) . ~/.bashrc ;;
-*mksh*) . ~/.mkshrc ;;
-*oksh*) . ~/.okshrc ;;
-*yash*) . ~/.yashrc ;;
+*mksh*) bind '^L=clear-screen' ;;
 esac
 
-amimullvad() {
-	curl -s https://am.i.mullvad.net/connected
-}
+# Misc
 
-#########
-# Sources
-#########
+PENDING="$HOME"/.cache/tsk/pending.csv
+if [ -f "$PENDING" ] && [ -n "$(cat "$HOME"/.cache/tsk/pending.csv)" ]; then
+	tsk p
+	echo
+fi
+unset PENDING
 
-. "$HOME"/.private
-
-##########
-# Bindings
-##########
-
-bind '^L=clear-screen'
+export EDITOR="vi"
