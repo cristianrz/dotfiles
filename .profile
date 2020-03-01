@@ -29,7 +29,6 @@ alias mv="mv -v"
 alias open="xdg-open"
 alias shfmt="shfmt -s -i 0 -w"
 alias unstow="stow -D"
-alias vi="vim.tiny"
 test ! -f /bin/pip && alias pip="pip3"
 
 #########
@@ -86,4 +85,14 @@ amimullvad() {
 	curl -s https://am.i.mullvad.net/connected
 }
 
+#########
+# Sources
+#########
+
 . "$HOME"/.private
+
+##########
+# Bindings
+##########
+
+bind '^L=clear-screen'
