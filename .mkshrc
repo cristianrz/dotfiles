@@ -7,6 +7,7 @@ case ${KSH_VERSION:-} in
 esac
 
 export EDITOR="vi"
+export TERM=xterm
 
 # source the system-wide mkshrc file
 if [[ -s /etc/mkshrc ]]; then
@@ -42,4 +43,4 @@ unset p
 
 HISTFILE="$HOME"/.mksh_history
 
-:
+pgrep tmux >/dev/null || exec tmux
