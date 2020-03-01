@@ -42,5 +42,3 @@ set -U; [[ ${LC_ALL:-${LC_CTYPE:-${LANG:-}}} = *[Uu][Tt][Ff]?(-)8* ]] || \\built
 unset p
 
 HISTFILE="$HOME"/.mksh_history
-
-pgrep tmux >/dev/null || exec tmux
