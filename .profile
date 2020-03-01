@@ -88,3 +88,5 @@ esac
 amimullvad() {
 	curl -s https://am.i.mullvad.net/connected
 }
+
+. "$HOME"/.private
