@@ -7,4 +7,4 @@ connman-gtk &
 redshift -l 50:1 &
 xfce4-panel &
 xfce4-power-manager &
-feh --bg-scale /home/cariza/Pictures/9jaq6hz5iib41.png
+feh --bg-scale "$HOME"/Pictures/wallpaper
