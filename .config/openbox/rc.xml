@@ -257,7 +257,7 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="Print">
