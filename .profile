@@ -45,7 +45,7 @@ path_add "$HOME"/bin
 path_add "$HOME"/go/bin
 path_add /usr/local/bin
 path_add /usr/bin
-path_add /usr/local/plan9/bin
+path_add /bin
 export PATH
 
 ###########
