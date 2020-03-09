@@ -150,12 +150,6 @@
       they are maximized, or when they are initially placed.
       Many programs reserve space automatically, but you can use this in other
     cases. -->
-  <margins>
-    <top>44</top>
-    <bottom>15</bottom>
-    <left>15</left>
-    <right>15</right>
-  </margins>
   <dock>
     <position>Bottom</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
