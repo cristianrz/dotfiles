@@ -33,21 +33,6 @@ export TERM="screen-256color"
 export HISTFILESIZE= # Infinite history
 export HISTFILE="$HOME"/.mksh_history
 
-path_add(){
-    case "$PATH" in
-    "") PATH="$*" ;;
-    *) PATH="$PATH":"$*" ;;
-    esac
-}
-
-PATH=
-path_add "$HOME"/bin
-path_add "$HOME"/go/bin
-path_add /usr/local/bin
-path_add /usr/bin
-path_add /bin
-export PATH
-
 ###########
 # Functions
 ###########
@@ -84,3 +69,8 @@ fi
 ##########
 
 bind '^L=clear-screen'
+
+PS1='$(
+	basename "$(pwd)"
+) \$ '
+export PS1
