@@ -25,7 +25,5 @@ set undodir=.vim/,~/.vim/backups/,/tmp/
 
 set t_Co=256
 set t_ut=
-set splitbelow
-set termwinsize=8x0
 set backspace=indent,eol,start
 set nocp
