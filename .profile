@@ -14,12 +14,11 @@ alias grep="/bin/env grep --color=auto"
 alias his="history 1000 | grep -i"
 alias ll="ls -lrt"
 alias ls='/bin/env ls -N -h --group-directories-first'
-alias mkdir="mkdir -v"
-alias mv="mv -v"
-alias open="xdg-open"
-alias shfmt="shfmt -s -i 0 -w"
-alias unstow="stow -D"
-test ! -f /bin/pip && alias pip="pip3"
+alias mkdir="/bin/env mkdir -v"
+alias mv="/bin/env mv -v"
+alias open="/bin/env xdg-open"
+alias shfmt="/bin/env shfmt -s -i 0 -w"
+alias unstow="/bin/env stow -D"
 
 #########
 # Exports
@@ -46,23 +45,12 @@ path_add "$HOME"/go/bin
 path_add /usr/local/bin
 path_add /usr/bin
 path_add /bin
+path_add /usr/local/go/bin
 export PATH
 
 ###########
 # Functions
 ###########
-
-# ls and print a new line after cd
-c() {
-	cd "$@" &&
-	ls &&
-	echo ""
-}
-
-# opens a link inside a text file
-openlink() {
-	xdg-open "$(cat "$1")" > /dev/null 2>&1 &
-}
 
 amimullvad() {
 	curl -s https://am.i.mullvad.net/connected
@@ -87,4 +75,19 @@ fi
 # Bindings
 ##########
 
-bind '^L=clear-screen'
+case "$0" in
+*mksh*) bind '^L=clear-screen' ;;
+esac
+
+PS1='[31m$(e=$?; (( e )) && printf "(%s) " "$e")[36m$USER[90m@[95m$HOSTNAME [90m${PWD##*/} [36m$[39m '
+# PS1="$(
+# 	EXIT="\$?"
+# 	case "\$EXIT" in
+# 	0) ;;
+# 	*) printf '%s|' "\$EXIT" ;;
+# 	esac
+# 
+# 	echo -e "EXIT=$?; \e[36m$USER\e[90m@\e[95m$HOSTNAME \e[90m\${PWD##*/} \e[36m$\e[39m "
+# )"
+
+# ${debian_chroot:+($debian_chroot)}${| \builtin typeset e=$? (( e )) && REPLY+="$e|" REPLY+=${USER}@${HOSTNAME%%.*}: \builtin typeset d=${PWD:-?}/ p=~; [[ $p = ?(*/) ]] || d=${d/#$p\//\~/} d=${d%/}; \builtin typeset m=${%d} n p=...; (( m > 0 )) || m=${#d} (( m > (n = (COLUMNS/3 < 7 ? 7 : COLUMNS/3)) )) && d=${d:(-n)} || p= REPLY+=$p$d \builtin return $e } $
