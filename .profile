@@ -68,16 +68,20 @@ amimullvad() {
 	curl -s https://am.i.mullvad.net/connected
 }
 
-if [ -n "$(cat "$HOME"/.cache/tsk/pending.csv)" ]; then
+PENDING="$HOME"/.cache/tsk/pending.csv
+if [ -f "$PENDING" ] && [ -n "$(cat "$HOME"/.cache/tsk/pending.csv)" ]; then
 	tsk p
 	echo
 fi
+unset PENDING
 
 #########
 # Sources
 #########
 
-. "$HOME"/.private
+if [ -f "$HOME"/.private ]; then
+	. "$HOME"/.private
+fi
 
 ##########
 # Bindings
