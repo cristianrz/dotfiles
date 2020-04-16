@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Sources
 
@@ -7,31 +7,39 @@
 [ -s /etc/mkshrc ] && . /etc/mkshrc
 
 # Aliases
+alias amimullvad="curl https://am.i.mullvad.net/connected"
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
 alias cp="cp -v"
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias grep="/bin/env grep --color=auto"
+alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias grep="grep --color=auto"
 alias his="history 1000 | grep -i"
-alias ll="ls -lrt"
-alias ls='/bin/env ls -N -h --group-directories-first'
-alias mkdir="/bin/env mkdir -v"
-alias mv="/bin/env mv -v"
-alias open="/bin/env xdg-open"
-alias shfmt="/bin/env shfmt -s -i 0 -w"
-alias unstow="/bin/env stow -D"
+alias ll="ls -l"
+alias ls='ls -N -h --color=auto --group-directories-first'
+alias mkdir="mkdir -v"
+alias mv="mv -v"
+alias shellcheck="shellcheck -x"
+alias shfmt="shfmt -s -i 0 -w"
+alias unstow="stow -D"
 
 # Exports
+export EDITOR="vi"
 export GOBIN="$HOME/go/bin"
 export GOPATH="$HOME/go"
-export HISTFILE="$HOME"/.mksh_history
 export HISTFILESIZE= # Infinite history
 export TERM="screen-256color"
 
-path_add(){
-    case "$PATH" in
-    "") PATH="$*" ;;
-    *) PATH="$PATH:$*" ;;
-    esac
+case "$0" in
+*mksh*) export HISTFILE="$HOME"/.mksh_history ;;
+*bash*) export HISTFILE="$HOME"/.bash_history ;;
+esac
+
+# PS1='\[\033[38;5;081m\]\u\[\033[38;5;245m\]@\[\033[38;5;206m\]\H \[\033[38;5;245m\]\w \[\033[38;5;081m\]$ \[\e[0m\]'
+
+path_add() {
+	case "$PATH" in
+	"") PATH="$*" ;;
+	*) PATH="$PATH:$*" ;;
+	esac
 }
 
 unset PATH
@@ -43,25 +51,32 @@ path_add /usr/bin
 path_add /bin
 export PATH
 
-PS1='[31m$(e=$?; (( e )) && printf "(%s) " "$e")[36m$USER[90m@[95m$HOSTNAME [90m${PWD##*/} [36m$[39m '
+case "$0" in
+*mksh*) PS1='[31m$(e=$?; (( e )) && printf "(%s) " "$e")[36m$USER[90m@[95m$HOSTNAME [90m${PWD##*/} [36m$[39m ' ;;
+*bash*) PS1='\[\033[38;5;081m\]\u\[\033[38;5;245m\]@\[\033[38;5;206m\]\H \[\033[38;5;245m\]\w \[\033[38;5;081m\]$ \[\e[0m\]' ;;
+esac
+
 export PS1
 
 # Functions
-amimullvad() { curl -s https://am.i.mullvad.net/connected; }
+gedit() {
+	mousepad "$@" >/dev/null 2>&1 &
+}
+
+open() {
+	if [ "x$1" = "x-v" ]; then
+		shift
+		xdg-open "$@"
+	else
+		nohup xdg-open "$@" >/dev/null 2>&1 &
+	fi
+}
 
 # Bindings
-
 case "$0" in
 *mksh*) bind '^L=clear-screen' ;;
 esac
 
 # Misc
-
-PENDING="$HOME"/.cache/tsk/pending.csv
-if [ -f "$PENDING" ] && [ -n "$(cat "$HOME"/.cache/tsk/pending.csv)" ]; then
-	tsk p
-	echo
-fi
-unset PENDING
-
-export EDITOR="vi"
+synclient VertScrollDelta=-42
+synclient HorizScrollDelta=-42
