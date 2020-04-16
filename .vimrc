@@ -27,3 +27,7 @@ set t_Co=256
 set t_ut=
 set backspace=indent,eol,start
 set nocp
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-easy-align'
+call plug#end()
