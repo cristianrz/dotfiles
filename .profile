@@ -1,14 +1,12 @@
 EDITOR="vi"
 
-# source the system-wide mkshrc file
-[[ -s /etc/mkshrc ]] && . /etc/mkshrc
-
 #########
 # Aliases
 #########
 
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
 alias cp="cp -v"
+alias sudo=""
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="/bin/env grep --color=auto"
 alias his="history 1000 | grep -i"
@@ -63,14 +61,4 @@ fi
 #########
 
 . "$HOME"/.private
-
-##########
-# Bindings
-##########
-
-bind '^L=clear-screen'
-
-PS1='$(
-	basename "$(pwd)"
-) \$ '
-export PS1
+. "$HOME"/.bashrc
