@@ -71,12 +71,3 @@ open() {
 		nohup xdg-open "$@" >/dev/null 2>&1 &
 	fi
 }
-
-# Bindings
-case "$0" in
-*mksh*) bind '^L=clear-screen' ;;
-esac
-
-# Misc
-synclient VertScrollDelta=-42
-synclient HorizScrollDelta=-42
