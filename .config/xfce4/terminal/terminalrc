@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Go Mono 16
+FontName=MesloLGS NF 18
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -33,4 +33,5 @@ ScrollingOnOutput=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingUnlimited=TRUE
 FontAllowBold=FALSE
+TitleInitial=xfce4-terminal
 
