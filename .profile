@@ -13,7 +13,7 @@ alias cp="cp -v"
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep --color=auto"
 alias his="history 1000 | grep -i"
-alias ll="ls -l"
+alias ll="ls -lA"
 alias ls='ls -N -h --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
 alias mv="mv -v"
@@ -23,8 +23,8 @@ alias unstow="stow -D"
 
 # Exports
 export EDITOR="vi"
-export GOBIN="$HOME/go/bin"
-export GOPATH="$HOME/go"
+#export GOBIN="$HOME/go/bin"
+#export GOPATH="$HOME/go"
 export HISTFILESIZE= # Infinite history
 export TERM="screen-256color"
 
