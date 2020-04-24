@@ -13,6 +13,8 @@
 #     PATH="$HOME/bin:$PATH"
 # fi
 
+PATH="$HOME/bin:$HOME/go/bin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
