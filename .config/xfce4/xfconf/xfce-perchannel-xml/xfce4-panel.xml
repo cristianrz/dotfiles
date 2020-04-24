@@ -7,9 +7,9 @@
     <property name="panel-1" type="empty">
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="background-alpha" type="uint" value="100"/>
-      <property name="background-style" type="uint" value="0"/>
+      <property name="background-style" type="uint" value="1"/>
       <property name="disable-struts" type="bool" value="false"/>
-      <property name="enter-opacity" type="uint" value="90"/>
+      <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="length" type="uint" value="100"/>
       <property name="mode" type="uint" value="0"/>
@@ -30,7 +30,13 @@
       </property>
       <property name="position" type="string" value="p=8;x=512;y=752"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="35"/>
+      <property name="size" type="uint" value="36"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.000000"/>
+        <value type="double" value="0.000000"/>
+        <value type="double" value="0.101961"/>
+        <value type="double" value="1.000000"/>
+      </property>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -53,6 +59,12 @@
       <property name="show-frame" type="bool" value="true"/>
       <property name="size-max" type="uint" value="22"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="gpick"/>
+        <value type="string" value="liferea"/>
+        <value type="string" value="nxclient.bin"/>
+        <value type="string" value="teamviewer"/>
+        <value type="string" value="steam"/>
+        <value type="string" value="toolbox"/>
         <value type="string" value="barrier"/>
         <value type="string" value="gigolo"/>
         <value type="string" value="notes"/>
@@ -94,7 +106,7 @@
     </property>
     <property name="plugin-1" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance10637;chromium.instance16821;chromium.instance18065;chromium.instance18673;chromium.instance19320;chromium.instance21812;chromium.instance2290;chromium.instance2327;chromium.instance2329;chromium.instance2344;chromium.instance2402;chromium.instance2545;chromium.instance2610;chromium.instance2806;chromium.instance32423;chromium.instance476;smplayer;vlc"/>
+      <property name="mpris-players" type="string" value="chromium.instance10637;chromium.instance11233;chromium.instance11878;chromium.instance1323;chromium.instance16821;chromium.instance17314;chromium.instance17452;chromium.instance17957;chromium.instance18065;chromium.instance18673;chromium.instance19320;chromium.instance1993;chromium.instance2033;chromium.instance21812;chromium.instance2276;chromium.instance2290;chromium.instance2327;chromium.instance2329;chromium.instance2344;chromium.instance2402;chromium.instance2430;chromium.instance2545;chromium.instance2610;chromium.instance2753;chromium.instance2806;chromium.instance31898;chromium.instance32109;chromium.instance32423;chromium.instance476;chromium.instance8830;chromium.instance8868;chromium.instance897;smplayer;vlc"/>
     </property>
     <property name="plugin-7" type="string" value="systemload"/>
     <property name="plugin-12" type="string" value="power-manager-plugin"/>
