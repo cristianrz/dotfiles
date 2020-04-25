@@ -12,7 +12,7 @@ alias cp="cp -v"
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep --color=auto"
 alias his="history 1000 | grep -i"
-alias ll="ls -lrt"
+alias ll="ls -l"
 alias ls='ls -h --color=auto --group-directories-first'
 alias mkdir="mkdir -v"
 alias mv="mv -v"
@@ -43,9 +43,12 @@ synclient HorizScrollDelta=-42
 
 wal -i ~/Pictures/stairs.jpg >/dev/null 2>&1
 
-case "$TERM" in
-linux | screen) ;;
-*) exec tmux ;;
-esac
+printf 'suckless mode? [Y/n] '
+read -r ans
+[ "$ans" != "n" ] && suckless-mode
 
+# case "$TERM" in
+# linux | screen) ;;
+# *) exec tmux ;;
+# esac
 
