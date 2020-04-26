@@ -1,56 +1,30 @@
-#!/usr/bin/env sh
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
 
-# Aliases
-alias amimullvad="curl https://am.i.mullvad.net/connected"
-alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
-alias cp="cp -v"
-alias sudo=""
-alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias grep="grep --color=auto"
-alias his="history 1000 | grep -i"
-alias ll="ls -l"
-alias ls='ls -N -h --color=auto --group-directories-first'
-alias mkdir="mkdir -v"
-alias mv="mv -v"
-alias shellcheck="shellcheck -x"
-alias shfmt="shfmt -s -i 0 -w"
-alias unstow="stow -D"
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
 
-# Exports
-export EDITOR="vi"
-export GOBIN="$HOME/go/bin"
-export GOPATH="$HOME/go"
-export HISTFILESIZE= # Infinite history
-export TERM="screen-256color"
+# set PATH so it includes user's private bin if it exists
+# if [ -d "$HOME/bin" ] ; then
+#     PATH="$HOME/bin:$PATH"
+# fi
 
-case "$0" in
-*mksh*) export HISTFILE="$HOME"/.mksh_history ;;
-*bash*) export HISTFILE="$HOME"/.bash_history ;;
+PATH="$HOME/bin:$HOME/go/bin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin"
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+case x"$0" in
+x-ash) . "$HOME"/.ashrc ;;
+x-/bin/ash) . "$HOME"/.ashrc ;;
+xash) . "$HOME"/.ashrc ;;
 esac
-
-# PS1='\[\033[38;5;081m\]\u\[\033[38;5;245m\]@\[\033[38;5;206m\]\H \[\033[38;5;245m\]\w \[\033[38;5;081m\]$ \[\e[0m\]'
-
-###########
-# Functions
-###########
-
-case "$0" in
-*mksh*) PS1='[31m$(e=$?; (( e )) && printf "(%s) " "$e")[36m$USER[90m@[95m$HOSTNAME [90m${PWD##*/} [36m$[39m ' ;;
-*bash*) PS1='\[\033[38;5;081m\]\u\[\033[38;5;245m\]@\[\033[38;5;206m\]\H \[\033[38;5;245m\]\w \[\033[38;5;081m\]$ \[\e[0m\]' ;;
-esac
-
-export PS1
-
-# Functions
-gedit() {
-	mousepad "$@" >/dev/null 2>&1 &
-}
-
-open() {
-	if [ "x$1" = "x-v" ]; then
-		shift
-		xdg-open "$@"
-	else
-		nohup xdg-open "$@" >/dev/null 2>&1 &
-	fi
-}
