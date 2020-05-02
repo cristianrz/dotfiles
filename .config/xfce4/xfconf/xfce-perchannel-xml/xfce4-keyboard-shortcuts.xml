@@ -12,12 +12,12 @@
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="empty"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="XF86Display" type="empty"/>
       <property name="&lt;Super&gt;p" type="empty"/>
       <property name="&lt;Primary&gt;Escape" type="empty"/>
       <property name="XF86WWW" type="empty"/>
       <property name="XF86Mail" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="Print" type="empty"/>
     </property>
     <property name="custom" type="empty">
@@ -35,8 +35,8 @@
       <property name="&lt;Alt&gt;2" type="string" value="dmenu_run">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;t" type="string" value="openw sakura -l"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;t" type="string" value="ls"/>
+      <property name="&lt;Super&gt;t" type="string" value="sakura"/>
+      <property name="&lt;Primary&gt;&lt;Shift&gt;t" type="string" value=":"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
