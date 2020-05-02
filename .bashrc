@@ -1,6 +1,13 @@
 #!/bin/sh
+case $- in
+*i*) ;;
+*) return;;
+esac
 
-# Sources
+if [ -z "$TMUX" ]; then
+	printf 'tmux? ' && read -r ans
+	[ "$ans" = "y" ] || [ "$ans" = "" ] && exec tmux
+fi
 
 # shellcheck source=/dev/null
 [ -f "$HOME"/.private ] && . "$HOME"/.private
@@ -8,6 +15,7 @@
 # Aliases
 alias amimullvad="curl https://am.i.mullvad.net/connected"
 alias compress="7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on"
+alias cd-local="cd $HOME/.local"
 alias cp="cp -v"
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep="grep --color=auto"
@@ -18,14 +26,14 @@ alias mkdir="mkdir -v"
 alias mv="mv -v"
 alias shellcheck="shellcheck -x"
 alias shfmt="shfmt -s -i 0 -w"
-alias unstow="stow -D"
 
 # Exports
 export EDITOR="vi"
 export HISTFILE="$HOME"/.bash_history
+export HISTSIZE=
 export HISTFILESIZE= # Infinite history
 
-PS1='\[\033[38;5;081m\]\u\[\033[38;5;245m\]@\[\033[38;5;206m\]\H \[\033[38;5;245m\]\w \[\033[38;5;081m\]$ \[\e[0m\]'
+PS1='\H \w \$ '
 export PS1
 
 # Functions
@@ -38,17 +46,15 @@ open() {
 }
 
 # Misc
-synclient VertScrollDelta=-42
-synclient HorizScrollDelta=-42
+# synclient VertScrollDelta=-42
+# synclient HorizScrollDelta=-42
 
 wal -i ~/Pictures/stairs.jpg >/dev/null 2>&1
-
-printf 'suckless mode? [Y/n] '
-read -r ans
-[ "$ans" != "n" ] && suckless-mode
 
 # case "$TERM" in
 # linux | screen) ;;
 # *) exec tmux ;;
 # esac
 
+
+alias LOCAL="/home/crz/.local"
