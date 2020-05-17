@@ -1,5 +1,4 @@
 # shellcheck shell=sh
-# This file is read at login
 
 NIX_PROFILE="$HOME/.nix-profile/etc/profile.d/nix.sh"
 
@@ -14,3 +13,5 @@ fi
 if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
 fi
+
+umask 077
